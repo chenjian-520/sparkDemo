@@ -1,0 +1,29 @@
+dpm_dwd_production_output_day :
+  DPM_DWD_PRODUCTION_OUTPUT_DAY :
+    #addsalt+WorkDT+Site+LevelCode+Line+IsFail+UUID
+    - Rowkey=String
+    - site_code=String
+    - level_code=String
+    - plant_code=String
+    - process_code=String
+    - area_code=String
+    - line_code=String
+    - machine_id=String
+    - part_no=String
+    - sku=String
+    - plantform=String
+    - customer=String
+    - wo=String
+    - workorder_type=String
+    - work_dt=String
+    - work_shift=String
+    - sn=String
+    - station_code=String
+    - station_name=String
+    - is_fail=String
+    - scan_by=String
+    - scan_dt=Long
+    - output_qty=String
+    - update_dt=Long
+    - update_by=String
+    - data_from=String

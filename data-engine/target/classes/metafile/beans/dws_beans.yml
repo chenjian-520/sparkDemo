@@ -1,0 +1,12 @@
+dpm_dws_production_output_day:
+  DPM_DWS_PRODUCTION_OUTPUT_DAY :
+    - RowKey=String
+    - WorkDT=String
+    - SiteCodeID=String
+    - LevelCodeID=String
+    - normalized_output_qty=String
+    - InsertDT=String
+    - InsertBy=String
+    - UpdateDT=String
+    - UpdateBy=String
+    - DataFrom=String

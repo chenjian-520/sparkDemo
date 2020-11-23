@@ -1,0 +1,1365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="data-engine:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="055187d6-6255-45ac-9b08-0118dfba01a1" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/dataengine$com_tm_dl_javasdk_dpspark_DPSparkApp.coverage" NAME="com.tm.dl.javasdk.dpspark.DPSparkApp Coverage Results" MODIFIED="1578042779396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="QA_ADS_10.60.136.155" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="QA_ADS_10.60.136.155" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="QA_ADS_10.60.136.155" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dp_ads: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="dataengine" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="DayOutPutCalculate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/DayOutPutCalculate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4554">
+              <caret line="232" column="90" selection-start-line="232" selection-start-column="82" selection-end-line="232" selection-end-column="94" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BatchGetter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/batchData/BatchGetter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1771">
+              <caret line="391" column="34" selection-start-line="391" selection-start-column="34" selection-end-line="391" selection-end-column="34" />
+              <folding>
+                <element signature="initializer##0;class#BatchGetter#0" />
+                <element signature="e#2514#3649#0" />
+                <element signature="e#3655#4273#0" />
+                <element signature="e#4414#4904#0" />
+                <element signature="e#4910#5959#0" />
+                <element signature="e#5966#7897#0" />
+                <element signature="e#7903#11318#0" />
+                <element signature="e#11324#12433#0" />
+                <element signature="e#12439#12658#0" />
+                <element signature="e#12945#14999#0" />
+                <element signature="e#15005#15929#0" />
+                <element signature="e#15935#16081#0" />
+                <element signature="e#16249#17203#0" />
+                <element signature="e#17209#17350#0" />
+                <element signature="e#17356#18146#0" />
+                <element signature="e#18153#18928#0" />
+                <element signature="e#18934#19601#0" />
+                <element signature="e#19607#20531#0" />
+                <element signature="e#20537#20803#0" />
+                <element signature="e#20809#21002#0" />
+                <element signature="e#21008#21656#0" />
+                <element signature="e#21662#22279#0" />
+                <element signature="e#22285#22935#0" />
+                <element signature="e#22941#23665#0" />
+                <element signature="e#23671#23842#0" />
+                <element signature="e#23848#24341#0" />
+                <element signature="e#24347#24512#0" />
+                <element signature="e#24518#25001#0" />
+                <element signature="e#25007#25483#0" />
+                <element signature="e#25489#25971#0" />
+                <element signature="e#25977#26453#0" />
+                <element signature="e#26460#26899#0" />
+                <element signature="e#27037#27473#0" />
+                <element signature="e#27479#27608#0" />
+                <element signature="e#27614#28048#0" />
+                <element signature="e#28054#28476#0" />
+                <element signature="e#28482#28680#0" />
+                <element signature="e#28686#29889#0" />
+                <element signature="e#29895#30750#0" />
+                <element signature="e#30756#30886#0" />
+                <element signature="e#30892#31511#0" />
+                <element signature="e#31517#31763#0" />
+                <element signature="e#31769#32306#0" />
+                <element signature="e#32312#32518#0" />
+                <element signature="e#32524#32771#0" />
+                <element signature="e#33063#33676#0" />
+                <element signature="e#33682#33898#0" />
+                <element signature="e#33904#34255#0" />
+                <element signature="e#34261#34672#0" />
+                <element signature="e#35636#36165#0" />
+                <element signature="e#37599#38110#0" />
+                <element signature="e#38116#38478#0" />
+                <element signature="e#38485#38619#0" />
+                <element signature="e#38625#38751#0" />
+                <element signature="e#38856#38967#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CalculateYearWeek.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/udf/CalculateYearWeek.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LevelDayOutPut.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/temporary/LevelDayOutPut.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36386">
+              <caret line="1615" column="53" selection-start-line="1615" selection-start-column="53" selection-end-line="1615" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#9388#9585#0" />
+                <element signature="e#9591#9828#0" />
+                <element signature="e#10451#10497#0" />
+                <element signature="e#10505#10736#0" />
+                <element signature="e#10802#10855#0" />
+                <element signature="e#12101#12147#0" />
+                <element signature="e#12153#12194#0" />
+                <element signature="e#12203#12249#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calcute_l5_6_10_quarter_upph.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_quarter_upph.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4784">
+              <caret line="208" column="123" selection-start-line="208" selection-start-column="116" selection-end-line="208" selection-end-column="123" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calcute_l5_6_10_year_upph.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_year_upph.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="186" column="41" lean-forward="true" selection-start-line="186" selection-start-column="41" selection-end-line="186" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calcute_l5_6_10_week_upph.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_week_upph.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5152">
+              <caret line="224" column="41" selection-start-line="224" selection-start-column="41" selection-end-line="224" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EHR_MAN_HOUR.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/beans/EHR_MAN_HOUR.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calcute_l5_6_10_day_upph.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_day_upph.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4370">
+              <caret line="190" column="30" selection-start-line="190" selection-start-column="30" selection-end-line="190" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calcute_l5_6_10_month_upph.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_month_upph.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4232">
+              <caret line="184" column="69" selection-start-line="184" selection-start-column="69" selection-end-line="184" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>week</find>
+      <find>getStDateWeek</find>
+      <find>Week</find>
+      <find>formatNumber</find>
+      <find>to_unixtimestamp</find>
+      <find>to_unix_timestamp</find>
+      <find>L5_6_10.online_dl_upph_target</find>
+      <find>L5_6_10.offline_fix_dl_headcount_target</find>
+      <find>ehr_man_hour.week_id</find>
+      <find>dateStrCompare</find>
+      <find>salt</find>
+      <find>dpm_dws_if_m_dop</find>
+      <find>hGetter.saltRead</find>
+      <find>switch</find>
+      <find>week_id</find>
+      <find>Quarter</find>
+      <find>工聚类</find>
+      <find>month</find>
+      <find>getPut</find>
+      <find>dpm_dwd_production_output_day</find>
+      <find>DPM_DWD_PRODUCTION_OUTPUT_DAY</find>
+      <find>saltRddRead</find>
+      <find>dpm_ods_production_output_day_lten</find>
+      <find>DPM_ODS_PRODUCTION_OUTPUT_DAY_LTEN</find>
+      <find>ModelNo</find>
+      <find>rowDataset</find>
+      <find>DPMysql.rddRead</find>
+      <find>sortBy</find>
+      <find>CalculateYearWeek</find>
+      <find>getStDateQuarter</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>DPM_IF_M_DSN_BATCH</replace>
+      <replace>getBatchGetter(true)</replace>
+      <replace>getBatchGetter()</replace>
+      <replace>Double</replace>
+      <replace>BUCode</replace>
+      <replace>WorkDate</replace>
+      <replace>Date</replace>
+      <replace>batchGetter.getStDataMiniteAdd(-5)</replace>
+      <replace>batchGetter.getStDataMiniteAdd(-6)</replace>
+      <replace>nvl</replace>
+      <replace>1</replace>
+      <replace>String</replace>
+      <replace>Long</replace>
+      <replace>new GregorianCalendar();</replace>
+      <replace>Calendar.getInstance(TimeZone.getDefault());</replace>
+      <replace>Calendar.getInstance();</replace>
+      <replace>production_station_dsn_rdd</replace>
+      <replace>DPM_ODS_PRODUCTION_OUTPUT_DAY_LSIX</replace>
+      <replace>dpm_dws_dsn_day_output</replace>
+      <replace>Key</replace>
+      <replace>LevelCode</replace>
+      <replace>LevelCodedpm_dws_dsn_day_output.WorkDT</replace>
+      <replace>Tuple9</replace>
+      <replace>t9</replace>
+      <replace>工具类</replace>
+      <replace>=</replace>
+      <replace>DPHbase.saltRddRead</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/ScalaTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/beans/ManualHour.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/beans/DayDop.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/test.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/bk/L5ExcelUpph.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/unuse/bk/L5ExcelUpph.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/temparary/LevelDayOutPut.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/temporary/beans/DayDop.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/batchData/RowDataUtil.scala" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/batchData/BatchGetter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/batchData/BatchGetterFY.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/beans/dim_beans.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/beans/DsnDayOutPut.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/beans/dws_beans.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/beanstruct/ScalaBeanGetter.scala" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_dws/dpm_dws_dsn_day_output_calculate.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/L5ExcelUpph.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/DayOutPutCalculate.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_ads/calcute_year_kpi.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_ads/calcute_quarter_kpi.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_ads/calcute_month_kpi.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_ads/calcute_week_kpi.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_ads/calcute_day_kpi.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/DWDHelp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/DataCleanHelp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/DataCleanHelp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/beanstruct/BeanGetter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/udf/CalculateYearWeekEx.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/beans/EHR_MAN_HOUR.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/hbaseread/HGetter.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_day_upph.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/udf/FormatFloatNumber.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/PersonalWorkHourCalculate.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_day_output.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_week_upph.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_month_upph.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_quarter_upph.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_year_upph.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/TestRandom.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/batchData/BatchGetter.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/beans/ods_beans.yml" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/beans/dwd_beans.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/ods_dwd/ProductionStationDSN.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile.properties" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l10_day_output.sql" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/DSNUPPHCalculate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/udf/CalculateYearWeek.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/temporary/LevelDayOutPut.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="F:/javaEE/Java EE/svn/maven/apache-maven-3.5.2" />
+        <option name="userSettingsFile" value="F:\javaEE\Java EE\svn\maven\apache-maven-3.5.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="data-engine" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="data-engine" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="330" />
+    <option name="y" value="28" />
+    <option name="width" value="1480" />
+    <option name="height" value="856" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="dwd_dws" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="dwd_dws" type="462c0819:PsiDirectoryNode" />
+              <item name="beans" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="dwd_dws" type="462c0819:PsiDirectoryNode" />
+              <item name="udf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="dws_ads" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="ods_dwd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="temporary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="metafile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="metafile" type="462c0819:PsiDirectoryNode" />
+              <item name="beans" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="metafile" type="462c0819:PsiDirectoryNode" />
+              <item name="sqls" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="metafile" type="462c0819:PsiDirectoryNode" />
+              <item name="sqls" type="462c0819:PsiDirectoryNode" />
+              <item name="sql_temp" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="dataengine" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="GenericSQL" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.foxconn.dpm" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.foxconn.dpm.dwd_dws" />
+      <recent name="com.foxconn.dpm.dwd_dws.udf" />
+      <recent name="com.foxconn.dpm.util.other" />
+      <recent name="org.apache.hadoop.hbase.util" />
+      <recent name="com.foxconn.dpm.util.beanstruct" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\YZH_WORK\workspace_important\data-engine\src\main\resource\metafile\sqls\sql_temp" />
+      <recent name="D:\YZH_WORK\workspace_important\data-engine\src\main\java\com\foxconn\dpm\dwd_dws" />
+      <recent name="D:\YZH_WORK\workspace_important\data-engine\src\main\java\com\foxconn\dpm" />
+      <recent name="D:\YZH_WORK\workspace_important\data-engine\src\main\resource\metafile\sqls\sql_ads" />
+      <recent name="D:\YZH_WORK\workspace_important\data-engine\src\main\java\com\foxconn\dpm\dws_ads" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.com.tm.dl.javasdk.dpspark.DPSparkApp">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration name="BatchGetter" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.foxconn.dpm.util.batchData.BatchGetter" />
+      <module name="data-engine" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.foxconn.dpm.util.batchData.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.foxconn.dpm.Test" />
+      <module name="data-engine" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.foxconn.dpm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="com.tm.dl.javasdk.dpspark.DPSparkApp" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.tm.dl.javasdk.dpspark.DPSparkApp" />
+      <module name="data-engine" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;{ \&quot;dprunclass\&quot;: \&quot;com.foxconn.dpm.temporary.LevelDayOutPut\&quot;, \&quot;dpuserid\&quot;: \&quot;0ad735dc-f1d6-44c9-bdb1-5ce86b2e760f\&quot;, \&quot;dpmaster\&quot;: \&quot;local[*]\&quot;, \&quot;dpappName\&quot;: \&quot;datamanager2\&quot;, \&quot;pmClass\&quot;: \&quot;com.tm.dl.javasdk.dpspark.common.ProdPermissionManager\&quot;, \&quot;dpType\&quot;:\&quot;scheduling\&quot;}&quot;" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="Application.com.tm.dl.javasdk.dpspark.DPSparkApp" />
+      <item itemvalue="Application.BatchGetter" />
+      <item itemvalue="Application.Test" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="055187d6-6255-45ac-9b08-0118dfba01a1" name="Default" comment="" />
+      <created>1576895104655</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576895104655</updated>
+      <workItem from="1576895111192" duration="537000" />
+      <workItem from="1576895705008" duration="1967000" />
+      <workItem from="1576902482469" duration="848000" />
+      <workItem from="1576904934434" duration="1176000" />
+      <workItem from="1576912154202" duration="227000" />
+      <workItem from="1576912484007" duration="50627000" />
+      <workItem from="1577110479289" duration="130389000" />
+      <workItem from="1577455496924" duration="4057000" />
+      <workItem from="1577459573402" duration="22525000" />
+      <workItem from="1577510511125" duration="71368000" />
+      <workItem from="1577751567429" duration="194154000" />
+      <workItem from="1578269979055" duration="56841000" />
+      <workItem from="1578886279026" duration="1535000" />
+      <workItem from="1578890845976" duration="6190000" />
+      <workItem from="1578987776010" duration="1852000" />
+      <workItem from="1579051872506" duration="4416000" />
+      <workItem from="1579134295299" duration="3786000" />
+      <workItem from="1579220876635" duration="1119000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="553614000" />
+  </component>
+  <component name="TodoView" selected-index="2">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="330" y="28" width="1480" height="856" extended-state="1" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="1" />
+      <window_info anchor="bottom" id="TODO" order="9" weight="0.3290735" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3290735" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5090634" side_tool="true" weight="0.3290735" />
+      <window_info anchor="right" id="Maven Projects" order="8" sideWeight="0.49190283" weight="0.069296375" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.24920128" />
+      <window_info anchor="bottom" id="Spring" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3290735" />
+      <window_info id="Capture Tool" order="0" />
+      <window_info id="Designer" order="1" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.26549295" />
+      <window_info anchor="right" id="Bean Validation" order="10" sideWeight="0.49190283" weight="0.32930514" />
+      <window_info anchor="right" id="Database" order="9" sideWeight="0.49190283" weight="0.33761328" />
+      <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="11" sideWeight="0.4757085" weight="0.13066465" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="bottom" id="Favorites" order="13" side_tool="true" weight="0.3290735" />
+      <window_info anchor="bottom" id="Debug" order="6" sideWeight="0.49093655" weight="0.26517573" />
+      <window_info anchor="bottom" id="Thumbnails" order="7" visible="true" weight="0.37254903" />
+      <window_info anchor="right" id="Commander" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info id="Learn" order="7" />
+      <window_info anchor="bottom" id="Messages" order="1" weight="0.3290735" />
+      <window_info anchor="right" x="465" y="57" width="436" height="626" id="SQL Formatter" internal_type="SLIDING" order="7" show_stripe_button="false" type="SLIDING" weight="0.32930514" />
+      <window_info anchor="bottom" id="JProfiler" order="14" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.3290735" />
+      <window_info anchor="right" id="Coverage" order="0" sideWeight="0.5080972" side_tool="true" weight="0.32930514" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="Thumbnails" order="7" visible="true" weight="0.37254903" />
+      <window_info id="Designer" order="1" />
+      <window_info anchor="right" id="Palette" order="1" />
+      <window_info anchor="right" x="465" y="57" width="436" height="626" id="SQL Formatter" internal_type="SLIDING" order="7" show_stripe_button="false" type="SLIDING" weight="0.32930514" />
+      <window_info anchor="bottom" id="Spring" order="14" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.24920128" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="11" sideWeight="0.4757085" weight="0.13066465" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Favorites" order="15" side_tool="true" weight="0.3290735" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.3290735" />
+      <window_info id="Capture Tool" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Commander" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5090634" side_tool="true" weight="0.3290735" />
+      <window_info anchor="bottom" id="Messages" order="1" weight="0.3290735" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3290735" />
+      <window_info anchor="bottom" id="JProfiler" order="16" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
+      <window_info anchor="right" id="Maven Projects" order="8" sideWeight="0.49190283" visible="true" weight="0.069296375" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.2585288" />
+      <window_info id="Learn" order="6" />
+      <window_info anchor="right" id="Database" order="9" sideWeight="0.49190283" weight="0.33761328" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.3290735" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="right" id="Coverage" order="0" sideWeight="0.5080972" side_tool="true" weight="0.32930514" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.3290735" />
+      <window_info anchor="right" id="Bean Validation" order="10" sideWeight="0.49190283" weight="0.32930514" />
+      <window_info anchor="bottom" id="Debug" order="6" sideWeight="0.49093655" weight="0.26517573" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/batchData/BatchGetter.java</url>
+          <line>964</line>
+          <properties />
+          <option name="timeStamp" value="576" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/beanstruct/BeanGetter.java</url>
+          <line>275</line>
+          <properties />
+          <option name="timeStamp" value="586" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/beanstruct/BeanGetter.java</url>
+          <line>279</line>
+          <properties />
+          <option name="timeStamp" value="587" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="591" />
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+        <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/DataCleanHelp.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/org/apache/spark/sql/UDFRegistration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="32" column="86" selection-start-line="32" selection-start-column="85" selection-end-line="32" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/batchData/RowDataUtil.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/sql/SqlGetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/beanstruct/ScalaBeanGetter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/360data/jdk1.8.171/src.zip!/java/util/Calendar.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/ods_dwd/PersonnelEmpWorkhours.java" />
+    <entry file="jar://E:/360data/jdk1.8.171/src.zip!/java/text/DecimalFormat.java" />
+    <entry file="jar://E:/360data/jdk1.8.171/src.zip!/java/text/DecimalFormatSymbols.java" />
+    <entry file="jar://E:/360data/jdk1.8.171/src.zip!/java/text/NumberFormat.java" />
+    <entry file="jar://E:/360data/jdk1.8.171/src.zip!/java/text/Format.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/Test.java" />
+    <entry file="file://$PROJECT_DIR$/data-engine.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/com/tm/dl/javasdk/dpspark/hbase/DPHbase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/hbaseread/HGetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="48" column="103" selection-start-line="48" selection-start-column="103" selection-end-line="48" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/udf/FormatFloatNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_dws/dpm_dws_dsn_day_output_calculate.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/TestRandom.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/org/apache/spark/api/java/JavaPairRDD.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/udf/CalculateYearWeekEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/org/apache/spark/api/java/JavaRDD.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/temporary/beans/ManualStandardValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="56" column="79" selection-start-line="56" selection-start-column="79" selection-end-line="56" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/beans/ods_beans.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-501">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/org/apache/spark/api/java/JavaRDDLike.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/beanstruct/BeanGetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="method#getPuts#0;class#BeanGetter#0" />
+            <element signature="method#checkSqlSchema#0;class#BeanGetter#0" />
+            <element signature="method#checkSqlSchema#1;class#BeanGetter#0" />
+            <element signature="method#getDefaultOrderColumnNames#0;class#BeanGetter#0" />
+            <element signature="method#getDefaultOrderColumnNames#1;class#BeanGetter#0" />
+            <element signature="method#BeanGetter#0;class#BeanGetter#0" />
+            <element signature="method#initClassPool#0;class#BeanGetter#0" />
+            <element signature="method#creSchema#0;class#BeanGetter#0" />
+            <element signature="method#creSchema#1;class#BeanGetter#0" />
+            <element signature="method#creHSchema#0;class#BeanGetter#0" />
+            <element signature="method#creHSchema#1;class#BeanGetter#0" />
+            <element signature="method#removeUnNeedColumn#0;class#BeanGetter#0" />
+            <element signature="method#creRowPut#0;class#BeanGetter#0" />
+            <element signature="method#creMapPut#0;class#BeanGetter#0" />
+            <element signature="method#initYamlObject#0;class#BeanGetter#0" />
+            <element signature="method#initHBeanMeta#0;class#BeanGetter#0" />
+            <element signature="method#initBeanMeta#0;class#BeanGetter#0" />
+            <element signature="method#upFirst#0;class#BeanGetter#0" />
+            <element signature="method#clazzMakeField#0;class#BeanGetter#0" />
+            <element signature="method#clazzMakeField#1;class#BeanGetter#0" />
+            <element signature="method#getBaseTypeFullName#0;class#BeanGetter#0" />
+            <element signature="method#getTypeSimpleName#0;class#BeanGetter#0" />
+            <element signature="method#subFromEndCh#0;class#BeanGetter#0" />
+            <element signature="method#makeCtClassStack#0;class#BeanGetter#0" />
+            <element signature="method#checkYamlType#0;class#BeanGetter#0" />
+            <element signature="method#checkBaseType#0;class#BeanGetter#0" />
+            <element signature="method#getSchemaField#0;class#BeanGetter#0" />
+            <element signature="method#getSchemaFieldType#0;class#BeanGetter#0" />
+            <element signature="method#checkNameIsRowKey#0;class#BeanGetter#0" />
+            <element signature="method#existsHTable#0;class#BeanGetter#0" />
+            <element signature="method#existsTable#0;class#BeanGetter#0" />
+            <element signature="method#existsTableFamily#0;class#BeanGetter#0" />
+            <element signature="method#isNulls#0;class#BeanGetter#0" />
+            <element signature="method#readResolve#0;class#BeanGetter#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l10_day_output.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/beans/dwd_beans.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/beans/dws_beans.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/ods_dwd/ProductionStationDSN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2093">
+          <caret line="194" column="33" selection-start-line="194" selection-start-column="33" selection-end-line="194" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/com/tm/dl/javasdk/dpspark/mysql/DPMysql.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="122" column="153" selection-start-line="122" selection-start-column="137" selection-end-line="122" selection-end-column="153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/beans/ProductionOutput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/org/apache/spark/sql/SparkSession.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1150">
+          <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/beans/ManualHour.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/DSNUPPHCalculate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17020">
+          <caret line="761" column="141" selection-start-line="761" selection-start-column="8" selection-end-line="761" selection-end-column="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/PersonalWorkHourCalculate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1771">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_day_output.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/DayOutPutCalculate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4554">
+          <caret line="232" column="90" selection-start-line="232" selection-start-column="82" selection-end-line="232" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/beans/DsnDayOutPut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="37" selection-start-column="32" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/beans/EHR_MAN_HOUR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_day_upph.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4370">
+          <caret line="190" column="30" selection-start-line="190" selection-start-column="30" selection-end-line="190" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_month_upph.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4232">
+          <caret line="184" column="69" selection-start-line="184" selection-start-column="69" selection-end-line="184" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_week_upph.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5152">
+          <caret line="224" column="41" selection-start-line="224" selection-start-column="41" selection-end-line="224" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/udf/CalculateYearWeek.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/batchData/BatchGetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1771">
+          <caret line="391" column="34" selection-start-line="391" selection-start-column="34" selection-end-line="391" selection-end-column="34" />
+          <folding>
+            <element signature="initializer##0;class#BatchGetter#0" />
+            <element signature="e#2514#3649#0" />
+            <element signature="e#3655#4273#0" />
+            <element signature="e#4414#4904#0" />
+            <element signature="e#4910#5959#0" />
+            <element signature="e#5966#7897#0" />
+            <element signature="e#7903#11318#0" />
+            <element signature="e#11324#12433#0" />
+            <element signature="e#12439#12658#0" />
+            <element signature="e#12945#14999#0" />
+            <element signature="e#15005#15929#0" />
+            <element signature="e#15935#16081#0" />
+            <element signature="e#16249#17203#0" />
+            <element signature="e#17209#17350#0" />
+            <element signature="e#17356#18146#0" />
+            <element signature="e#18153#18928#0" />
+            <element signature="e#18934#19601#0" />
+            <element signature="e#19607#20531#0" />
+            <element signature="e#20537#20803#0" />
+            <element signature="e#20809#21002#0" />
+            <element signature="e#21008#21656#0" />
+            <element signature="e#21662#22279#0" />
+            <element signature="e#22285#22935#0" />
+            <element signature="e#22941#23665#0" />
+            <element signature="e#23671#23842#0" />
+            <element signature="e#23848#24341#0" />
+            <element signature="e#24347#24512#0" />
+            <element signature="e#24518#25001#0" />
+            <element signature="e#25007#25483#0" />
+            <element signature="e#25489#25971#0" />
+            <element signature="e#25977#26453#0" />
+            <element signature="e#26460#26899#0" />
+            <element signature="e#27037#27473#0" />
+            <element signature="e#27479#27608#0" />
+            <element signature="e#27614#28048#0" />
+            <element signature="e#28054#28476#0" />
+            <element signature="e#28482#28680#0" />
+            <element signature="e#28686#29889#0" />
+            <element signature="e#29895#30750#0" />
+            <element signature="e#30756#30886#0" />
+            <element signature="e#30892#31511#0" />
+            <element signature="e#31517#31763#0" />
+            <element signature="e#31769#32306#0" />
+            <element signature="e#32312#32518#0" />
+            <element signature="e#32524#32771#0" />
+            <element signature="e#33063#33676#0" />
+            <element signature="e#33682#33898#0" />
+            <element signature="e#33904#34255#0" />
+            <element signature="e#34261#34672#0" />
+            <element signature="e#35636#36165#0" />
+            <element signature="e#37599#38110#0" />
+            <element signature="e#38116#38478#0" />
+            <element signature="e#38485#38619#0" />
+            <element signature="e#38625#38751#0" />
+            <element signature="e#38856#38967#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/temporary/LevelDayOutPut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36386">
+          <caret line="1615" column="53" selection-start-line="1615" selection-start-column="53" selection-end-line="1615" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9388#9585#0" />
+            <element signature="e#9591#9828#0" />
+            <element signature="e#10451#10497#0" />
+            <element signature="e#10505#10736#0" />
+            <element signature="e#10802#10855#0" />
+            <element signature="e#12101#12147#0" />
+            <element signature="e#12153#12194#0" />
+            <element signature="e#12203#12249#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_quarter_upph.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4784">
+          <caret line="208" column="123" selection-start-line="208" selection-start-column="116" selection-end-line="208" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_year_upph.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="186" column="41" lean-forward="true" selection-start-line="186" selection-start-column="41" selection-end-line="186" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>data-engine:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.11.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>data-engine</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.treasuremountain.datalake.dpsparksdk:dpsparksdk:2.0.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
