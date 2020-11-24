@@ -1,0 +1,72 @@
+###########################################################
+#                  FOLD ID
+#任务层
+#    Sprint5=e3ee748a-dff0-4ab9-859e-403c2a3365fc
+#    Sprint4=6fbaa726-88fb-4d00-9acc-f2d86bcadf7c
+#    Sprint3=f6faa536-f4fa-4c70-9a3a-16f6f20abefc
+#    Sprint1-2=05c822b5-5fd3-4be6-a4e1-787cfb80747a
+#调度层
+#    Sprint5=8bdbb55a-cae1-4b4f-9965-6f7d9b459280
+#    Sprint4=68c5cd62-b468-409c-b099-c39513181164
+#    Sprint3=a75bfcd9-205c-4f8f-ab7c-f3393bea3148
+#    Sprint1-2=ae050257-17b7-4da7-8742-86e7e188c79f
+#
+###########################################################
+UPPH_SPRINT_5 :
+    - 'dprunclass=com.foxconn.dpm.sprint5.dws_ads.ProductionUpphSprintFive'
+    - 'task_fold_id=e3ee748a-dff0-4ab9-859e-403c2a3365fc'
+    - 'schedule_fold_id=8bdbb55a-cae1-4b4f-9965-6f7d9b459280'
+    - 'jarAbsPath=D:/YZH_WORK/workspace_now/dpm-wh/data-engine/out/artifacts/data_engine/data_engine.jar'
+    - 'cron=0 35 4,8,9,10,23 * * ?'
+    - 'taskTimeout=600'
+    - 'retriesNumber=2'
+    - 'sc_description=UPPH Sprint5'
+    - 'taskLevel=3-4'
+
+L10uph_SPRINT_5 :
+    - 'dprunclass=com.foxconn.dpm.sprint5.dwd_dws.L10UphDwdToDws'
+    - 'task_fold_id=e3ee748a-dff0-4ab9-859e-403c2a3365fc'
+    - 'schedule_fold_id=8bdbb55a-cae1-4b4f-9965-6f7d9b459280'
+    - 'jarAbsPath=C:/Users/ASUS/Desktop/F2.0_DPM/spark_project_jar/dpm-wh/data-engine/classes/artifacts/sparkETL/sparkETL.jar'
+    - 'cron=0 0 6,20 * * ?'
+    - 'taskTimeout=600'
+    - 'retriesNumber=2'
+    - 'sc_description=L10uph SPRINT_5'
+    - 'taskLevel=2-3'
+
+L5_OEE_SPRINT_5 :
+    - 'dprunclass=com.foxconn.dpm.sprint5.dws_ads.L5ProductionOeeSprintFive'
+    - 'task_fold_id=e3ee748a-dff0-4ab9-859e-403c2a3365fc'
+    - 'schedule_fold_id=8bdbb55a-cae1-4b4f-9965-6f7d9b459280'
+    - 'jarAbsPath=D:/YZH_WORK/workspace_now/dpm-wh/data-engine/out/artifacts/data_engine/data_engine.jar'
+    - 'cron=0 30 5,8,9,12,18,23 * * ?'
+    - 'taskTimeout=600'
+    - 'retriesNumber=2'
+    - 'sc_description=L5 OEE Sprint5'
+    - 'taskLevel=3-4'
+
+L5_FPY_SPRINT_5 :
+    - 'dprunclass=com.foxconn.dpm.sprint5.dws_ads.L5QualityFpySprintFive'
+    - 'task_fold_id=e3ee748a-dff0-4ab9-859e-403c2a3365fc'
+    - 'schedule_fold_id=8bdbb55a-cae1-4b4f-9965-6f7d9b459280'
+    - 'jarAbsPath=D:/YZH_WORK/workspace_now/dpm-wh/data-engine/out/artifacts/data_engine/data_engine.jar'
+    - 'cron=0 30 5,8,9,12,18,23 * * ?'
+    - 'taskTimeout=600'
+    - 'retriesNumber=2'
+    - 'sc_description=L5 FPY Sprint5'
+    - 'taskLevel=3-4'
+
+L6_UPH_Line_SPRINT_5 :
+    - 'dprunclass=com.foxconn.dpm.sprint5.dws_ads.L6UphToLine'
+    - 'task_fold_id=e3ee748a-dff0-4ab9-859e-403c2a3365fc'
+    - 'schedule_fold_id=8bdbb55a-cae1-4b4f-9965-6f7d9b459280'
+    - 'jarAbsPath=C:/Users/ASUS/Desktop/F2.0_DPM/spark_project_jar/dpm-wh/data-engine/classes/artifacts/sparkETL/sparkETL.jar'
+    - 'cron=0 33 7,8,9,14 * * ?'
+    - 'taskTimeout=3600'
+    - 'retriesNumber=2'
+    - 'sc_description=L6UphToLine'
+    - 'taskLevel=3-4'
+
+
+
+

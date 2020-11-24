@@ -5,9 +5,12 @@ import com.foxconn.dpm.util.MetaGetterRegistry;
 import com.tm.dl.javasdk.dpspark.common.hashsalt.ConsistentHashLoadBalance;
 import javassist.*;
 import org.apache.hadoop.hbase.client.Put;
+import org.apache.hadoop.hbase.client.Result;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.spark.api.java.function.Function;
 import org.apache.spark.sql.Row;
+import org.apache.spark.sql.RowFactory;
+import org.apache.spark.sql.catalyst.expressions.GenericRowWithSchema;
 import org.apache.spark.sql.types.*;
 import org.ho.yaml.Yaml;
 
@@ -22,6 +25,7 @@ import java.util.function.Consumer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import scala.Tuple2;
 import scala.collection.JavaConverters;
 import scala.collection.JavaConverters.*;
 
@@ -35,10 +39,10 @@ import scala.collection.JavaConverters.*;
  *                                                                           ************
  ********************************************************************************************** */
 public class BeanGetter implements Serializable, MetaGetterRegistry {
-
+    //TODO 此处存储在性能问题，之后可以通过组合模式进行分级处理类信息存储组件
     private ClassPool classPool;
     private Loader loader;
-    private HashMap<String, HashMap<String, HashMap<String, ArrayList<String>>>> hTableInfoMeta;
+    private HashMap<String, HashMap<String, ArrayList<String>>> hTableInfoMeta;
     private HashMap<String, CtClass> hTableInstanceMeta;
     private HashMap<String, HashMap<String, ArrayList<String>>> tableInfoMeta;
     private HashMap<String, CtClass> tableInstanceMeta;
@@ -46,19 +50,26 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
     private String BLANK = " ";
     private String SEMICOLON = ";";
 
-    public Put getPut(String tableName, String family, Object abstColumnValues, boolean ... isSubSufferFix) {
+    /**
+     * ====================================================================
+     * 描述:
+     * 注意：传入Row的时候：数据Rowkey前面加上预分区的个数：并且
+     * 所有字段全部转成String：因为代码中使用getString
+     * ====================================================================
+     */
+    public Put getPut(String tableName, String family, Object abstColumnValues, boolean... isSubSufferFix) {
         if ((isNull(abstColumnValues)) || !existsTableFamily(tableName, family)) {
             return null;
         }
         boolean isSubFamily = false;
-        if (isSubSufferFix != null && isSubSufferFix.length == 1){
+        if (isSubSufferFix != null && isSubSufferFix.length == 1) {
             isSubFamily = isSubSufferFix[0];
         }
-        if (abstColumnValues instanceof String[] && hTableInfoMeta.get(tableName).get(tableName).get(family).size() == ((String[]) abstColumnValues).length) {
+        if (abstColumnValues instanceof String[] && hTableInfoMeta.get(tableName).get(family).size() == ((String[]) abstColumnValues).length) {
             return creArrPut(isSubFamily, tableName, family, (String[]) abstColumnValues);
         } else if (abstColumnValues instanceof HashMap && ((HashMap) abstColumnValues).size() >= 1) {
             return creMapPut(isSubFamily, tableName, family, (HashMap<String, String>) abstColumnValues);
-        } else if (abstColumnValues instanceof Row && ((Row) (abstColumnValues)).size() == hTableInfoMeta.get(tableName).get(tableName).get(family).size()) {
+        } else if (abstColumnValues instanceof Row && ((Row) (abstColumnValues)).size() == hTableInfoMeta.get(tableName).get(family).size()) {
             return creRowPut(isSubFamily, tableName, family, (Row) abstColumnValues);
         } else {
             return null;
@@ -81,6 +92,81 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
         }
         return putCounter != familyCellEntries.values().size() ? null : puts;
     }
+
+    public static void main(String[] args) {
+    }
+
+    public HashMap<String, StructField> creDeftSchemaMap(String tableName) {
+        HashMap<String, StructField> databaseMapping = new HashMap<>();
+        creSchema(tableName).forEach(new Consumer<StructField>() {
+            @Override
+            public void accept(StructField confField) {
+                databaseMapping.put(confField.name(), confField);
+            }
+        });
+        return databaseMapping;
+    }
+
+    //unsuguesst method
+    public HashMap<String, StructField> creDeftSchemaMap(String tableName, String... columns) {
+
+        if (columns == null || columns.length == 0) {
+            return creDeftSchemaMap(tableName);
+        } else {
+            HashMap<String, StructField> databaseMapping = new HashMap<>();
+            creSchema(tableName, columns).forEach(new Consumer<StructField>() {
+                @Override
+                public void accept(StructField confField) {
+                    databaseMapping.put(confField.name(), confField);
+                }
+            });
+            return databaseMapping;
+        }
+
+    }
+
+    public HashMap<String, StructField> creDeftSchemaMap(String tableName, StructField... addStructFields) {
+        HashMap<String, StructField> databaseMapping = new HashMap<>();
+        creSchema(tableName).forEach(new Consumer<StructField>() {
+            @Override
+            public void accept(StructField confField) {
+                databaseMapping.put(confField.name(), confField);
+            }
+        });
+        for (StructField addStructField : addStructFields) {
+            databaseMapping.put(addStructField.name(), addStructField);
+        }
+        return databaseMapping;
+    }
+
+
+    public StructType getDeftSchemaStruct(String tableName, Tuple2<Integer, StructField>... addStructFields) {
+        List<StructField> confStructSchema = creSchema(tableName);
+        ArrayList<StructField> newStructFieldTemp = new ArrayList<>();
+        for (int i = 0; i < confStructSchema.size() + addStructFields.length; i++) {
+            newStructFieldTemp.add(null);
+
+        }
+        for (int i = 0; i < addStructFields.length; i++) {
+            newStructFieldTemp.set(addStructFields[i]._1, addStructFields[i]._2);
+        }
+        int i = 0;
+        for (StructField structField : confStructSchema) {
+            while (newStructFieldTemp.get(i) != null) {
+                i++;
+                if (i >= newStructFieldTemp.size()) {
+                    i = -1;
+                    break;
+                }
+            }
+            if (i == -1) {
+                return null;
+            }
+            newStructFieldTemp.set(i, structField);
+        }
+        return new StructType(newStructFieldTemp.toArray(new StructField[0]));
+    }
+
 
     public boolean checkSqlSchema(String tableName, List<StructField> structFields, boolean isCheckOrder) {
         try {
@@ -114,7 +200,7 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
                 return false;
             }
             if (isCheckOrder) {
-                ArrayList<String> metaColumnInfo = this.hTableInfoMeta.get(tableName).get(tableName).get(family);
+                ArrayList<String> metaColumnInfo = this.hTableInfoMeta.get(tableName).get(family);
                 for (int i = 0; i < metaColumnInfo.size(); i++) {
                     String[] splitMetaInfo = metaColumnInfo.get(i).split("=");
                     if (!splitMetaInfo[0].equals(structFields.get(i).name()) || !this.hTableInstanceMeta.get(tableName).getField(family).getType().getField(structFields.get(i).name()).getType().getSimpleName().equals(getTypeSimpleName(getBaseTypeFullName(upFirst(structFields.get(i).dataType().typeName()))))) {
@@ -135,32 +221,70 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
         }
     }
 
-    public HashMap<String, String[]> getDefaultOrderColumnNames(String tableName, String ... familys){
+    public HashMap<String, String[]> getDefaultOrderColumnNames(String tableName, String... familys) {
         HashMap<String, String[]> familiesColumnNames = new HashMap<>();
         for (String family : familys) {
-            String[] familyColumnNames = this.hTableInfoMeta.get(tableName).get(tableName).get(family).toArray(new String[0]);
-            if (familyColumnNames != null && familyColumnNames.length != 0){
+            String[] familyColumnNames = this.hTableInfoMeta.get(tableName).get(family).toArray(new String[0]);
+            if (familyColumnNames != null && familyColumnNames.length != 0) {
                 familiesColumnNames.put(family, familyColumnNames);
             }
         }
         return familiesColumnNames.size() != 0 ? familiesColumnNames : null;
     }
 
-    public String[] getDefaultOrderColumnNames(String tableName, String family){
-        return this.hTableInfoMeta.get(tableName).get(tableName).get(family).toArray(new String[0]);
+    public String[] getDefaultOrderColumnNames(String tableName, String family) {
+        return this.hTableInfoMeta.get(tableName).get(family).toArray(new String[0]);
+    }
+
+    public Row creDeftSchemaRow(String tableName, ArrayList values) {
+        List<StructField> structFields = creSchema(tableName);
+        for (int i = 0; i < structFields.size(); i++) {
+            values.set(i, getStringTargetTypeObj(structFields.get(i).dataType().getClass().getSimpleName().replace("Type$", ""), String.valueOf(values.get(i))));
+        }
+
+        return new GenericRowWithSchema(values.toArray(), creDeftSchemaStructType(tableName));
+    }
+
+    public Row creSchemaRow(StructType structType, ArrayList values) {
+        List<StructField> structFields = (List<StructField>) JavaConverters.seqAsJavaListConverter(structType.seq()).asJava();
+        for (int i = 0; i < structFields.size(); i++) {
+            values.set(i, getStringTargetTypeObj(structFields.get(i).dataType().getClass().getSimpleName().replace("Type$", ""), String.valueOf(values.get(i))));
+        }
+
+        return new GenericRowWithSchema(values.toArray(), structType);
+    }
+
+    public StructType getDeftSchemaStruct(String tableName) {
+        return creDeftSchemaStructType(tableName);
+    }
+
+    //该方法默认使用空串代替值
+    public ArrayList<String> resultGetConfDeftColumnsValues(Result result, String tableName, String family) {
+        String[] columnNames = hTableInfoMeta.get(tableName).get(family).toArray(new String[0]);
+        try {
+            ArrayList<String> columnValues = new ArrayList<>();
+            for (String columnName : columnNames) {
+                columnName = columnName.split("=")[0];
+                String columnValue = null;
+                if (columnName.toLowerCase().equals("rowkey")) {
+                    columnValue = Bytes.toString(result.getRow());
+                } else {
+                    columnValue = Bytes.toString(result.getValue(family.getBytes(), columnName.getBytes()));
+                }
+                columnValues.add(columnValue != null ? columnValue : "");
+            }
+            return columnValues.size() == columnNames.length ? columnValues : null;
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     /* ********************************************************************************************
      * >>>>>>>>>>>>>>>>>>>>             CODE BLOCK DESCRI             <<<<<<<<<<<<<<<<<<<<<<<<<<<<
      * ********************************************************************************************
-     *
-     *
      *   初始化
      *
      *
-     *                                                                             **   **
-     *
-     *                                                                           ************
      ********************************************************************************************** */
 
     private BeanGetter() {
@@ -210,6 +334,10 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
         }
     }
 
+    private StructType creDeftSchemaStructType(String tableName) {
+        return new StructType(creSchema(tableName).toArray(new StructField[0]));
+    }
+
     private List<StructField> creHSchema(String tableName, String family) {
 
         if (isNulls(tableName, family)) {
@@ -217,7 +345,7 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
         }
         try {
             List<StructField> schema = new ArrayList<>();
-            for (String fieldInfo : this.hTableInfoMeta.get(tableName).get(tableName).get(family)) {
+            for (String fieldInfo : this.hTableInfoMeta.get(tableName).get(family)) {
                 String[] splitFieldInfo = fieldInfo.split("=");
                 StructField structField = null;
                 if ((structField = getSchemaField(splitFieldInfo[0], splitFieldInfo[1])) != null) {
@@ -267,16 +395,18 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
         String usefulFamily = isSubSufferFix ? family.substring(0, family.lastIndexOf("_")).trim() : family;
         Put put = new Put(columnValues[0].getBytes());
         ArrayList<String> columnNames = null;
-        for (int i = 1; i < (columnNames = hTableInfoMeta.get(tableName).get(tableName).get(family)).size(); i++) {
+        for (int i = 1; i < (columnNames = hTableInfoMeta.get(tableName).get(family)).size(); i++) {
             try {
                 String[] columnNames_split = columnNames.get(i).split("=");
                 if (checkBaseType(hTableInstanceMeta.get(tableName).getField(family).getType().getField(columnNames_split[0]).getType().getSimpleName(), columnValues[i])) {
+                    if (usefulFamily.equals("")) {
+                        return null;
+                    }
                     put.addColumn(Bytes.toBytes(usefulFamily), columnNames_split[0].getBytes(), columnValues[i].getBytes());
                 } else {
                     return null;
                 }
             } catch (Exception e) {
-                e.printStackTrace();
                 return null;
             }
         }
@@ -284,7 +414,7 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
     }
 
     private Put creRowPut(boolean isSubSufferFix, String tableName, String family, Row columnValues) {
-        if (isNull() || columnValues.size() == 0) {
+        if (isNull(columnValues) || columnValues.size() == 0) {
             return null;
         }
         String usefulFamily = isSubSufferFix ? family.substring(0, family.lastIndexOf("_")) : family;
@@ -292,33 +422,49 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
 
         /////////////////////////////////////////////////////////////////////////////////////////////
         String baseRowKeyInfo = columnValues.getString(0);
-        Integer region = Integer.parseInt(baseRowKeyInfo.substring(0, baseRowKeyInfo.indexOf(":")));
-        if (region == null || region == 0){return null;}
+        Integer region = -1;
+        try {
+            region = Integer.parseInt(baseRowKeyInfo.substring(0, baseRowKeyInfo.indexOf(":")));
+        } catch (Exception e) {
+            return null;
+        }
+        //基本的rowkey信息
         String baseRowKey = baseRowKeyInfo.substring(baseRowKeyInfo.indexOf(":") + 1, baseRowKeyInfo.length());
-        //这一句代码很成问题：资源和侵入式开发都不是好方法
-        ConsistentHashLoadBalance consistentHashLoadBalance = new ConsistentHashLoadBalance(region);
-        String rowKey = consistentHashLoadBalance.selectNode(baseRowKey) + ":" + baseRowKey;
+        String rowKey = "";
+        if (region == -1) {
+            //此处不做处理数据无Rgion分区
+            rowKey = baseRowKey;
+        } else {
+            if (region == null || region == 0) {
+                return null;
+            } else {
+                //这一句代码很成问题：资源和侵入式开发都不是好方法
+                ConsistentHashLoadBalance consistentHashLoadBalance = new ConsistentHashLoadBalance(region);
+                rowKey = consistentHashLoadBalance.selectNode(baseRowKey) + ":" + baseRowKey;
+            }
+        }
+        try {
+            if ("".equals(rowKey) || rowKey == null) {
+                return null;
+            }
+        } catch (Exception e) {
+            return null;
+        }
         /////////////////////////////////////////////////////////////////////////////////////////////
 
         Put put = new Put(rowKey.getBytes());
 
         ArrayList<String> columnNames = null;
-        for (int i = 1; i < (columnNames = hTableInfoMeta.get(tableName).get(tableName).get(family)).size(); i++) {
+        for (int i = 1; i < (columnNames = hTableInfoMeta.get(tableName).get(family)).size(); i++) {
             try {
                 String[] columnNames_split = columnNames.get(i).split("=");
                 CtField field = hTableInstanceMeta.get(tableName).getField(family).getType().getField(columnNames_split[0]);
-                System.out.println(rowStructFields.get(i).name());
-                System.out.println(rowStructFields.get(i).dataType().simpleString());
-                System.out.println(field.getName());
-                System.out.println(field.getType().getSimpleName());
-
                 if (field.getType().getSimpleName().equals(upFirst(rowStructFields.get(i).dataType().simpleString())) && field.getName().equals(rowStructFields.get(i).name())) {
-                    put.addColumn(Bytes.toBytes(usefulFamily), columnNames_split[0].getBytes(),columnValues.getString(i).getBytes());
+                    put.addColumn(Bytes.toBytes(usefulFamily), columnNames_split[0].getBytes(), columnValues.getString(i).getBytes());
                 } else {
                     return null;
                 }
             } catch (Exception e) {
-                e.printStackTrace();
                 return null;
             }
         }
@@ -345,7 +491,6 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
                     return null;
                 }
             } catch (Exception e) {
-                e.printStackTrace();
                 return null;
             }
         }
@@ -360,26 +505,24 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
                     return;
                 }
                 String[] beanDirs = ((String) o).split("\\.");
-                String beanDir = beanDirs[0] + "/" + beanDirs[1];
+                String beanDir = beanDirs[0] + "/" + beanDirs[1] + "/" + beanDirs[2];
+                try {
 
-                switch (beanDir) {
-                    case "metafile/beans":
-                        Map<String, Object> load = (Map<String, Object>) new Yaml().load(BeanGetter.class.getClassLoader().getResourceAsStream("metafile/beans" + "/" + ((String) o2)));
+
+                    if (beanDir.startsWith("metafile/beans")) {
+                        Map<String, Object> load = (Map<String, Object>) new Yaml().load(BeanGetter.class.getClassLoader().getResourceAsStream(beanDir + "/" + ((String) o2)));
                         if (load == null) {
-                            break;
+                            return;
                         }
                         load.forEach(new BiConsumer<String, Object>() {
                             @Override
                             public void accept(String tableName, Object node) {
                                 switch (checkYamlType(node)) {
                                     case 1:
-                                        HashMap<String, HashMap<String, ArrayList<String>>> hTableNode = new HashMap<>();
-                                        hTableNode.put(tableName, (HashMap<String, ArrayList<String>>) node);
-                                        hTableInfoMeta.put(tableName, hTableNode);
+                                        hTableInfoMeta.put(tableName, (HashMap<String, ArrayList<String>>) node);
                                         try {
                                             initHBeanMeta();
                                         } catch (CannotCompileException e) {
-                                            e.printStackTrace();
                                             MetaGetter.getFtpLog().info("===================>>>" + tableName + "文件内容或格式错误<<<===================");
                                         }
                                         break;
@@ -390,8 +533,6 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
                                         try {
                                             initBeanMeta();
                                         } catch (CannotCompileException e) {
-                                            e.printStackTrace();
-                                            MetaGetter.getFtpLog().info("===================>>>" + tableName + "文件内容或格式错误<<<===================");
                                         }
                                         break;
                                     case -1:
@@ -399,7 +540,10 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
                                 }
                             }
                         });
+                    }
+                } catch (Exception e) {
                 }
+
             }
         });
     }
@@ -411,7 +555,7 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
         for (String tableName : hTableInfoMeta.keySet()) {
             CtClass tableCtClazz = classPool.makeClass(upFirst(tableName));
             this.ctClassStack.push(tableCtClazz);
-            hTableInfoMeta.get(tableName).get(tableName).forEach(new BiConsumer<String, ArrayList<String>>() {
+            hTableInfoMeta.get(tableName).forEach(new BiConsumer<String, ArrayList<String>>() {
                 @Override
                 public void accept(String familyName, ArrayList<String> columns) {
                     CtClass familyCtClazz = classPool.makeClass(upFirst(familyName));
@@ -463,14 +607,12 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
         try {
             type = getBaseTypeFullName(type);
         } catch (Exception e) {
-            e.printStackTrace();
             return false;
         }
         try {
             clazz.addField(CtField.make(new StringBuilder(BLANK).append(permission).append(BLANK).append(type).append(BLANK).append(name).append(SEMICOLON).toString(), clazz));
             return true;
         } catch (CannotCompileException e) {
-            e.printStackTrace();
         }
         return false;
     }
@@ -531,7 +673,6 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
                 clazz.makeClassInitializer();
                 this.loader.loadClass(clazz.getName());
             } catch (Exception e) {
-                e.printStackTrace();
                 this.ctClassStack.clear();
                 return false;
             }
@@ -542,7 +683,8 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
 
     private int checkYamlType(Object object) {
         try {
-            HashMap<String, HashMap<String, ArrayList>> load1 = (HashMap<String, HashMap<String, ArrayList>>) object;
+            //HashMap<String, HashMap<String, ArrayList>> load1 = (HashMap<String, HashMap<String, ArrayList>>) object;
+            HashMap<String, ArrayList> load1 = (HashMap<String, ArrayList>) object;
             return 1;
         } catch (Exception e) {
         }
@@ -594,6 +736,36 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
             return false;
         }
         return true;
+    }
+
+    public Object getStringTargetTypeObj(String typeSimpleName, String value) {
+        try {
+            switch (typeSimpleName) {
+                case "String":
+                    return value;
+                case "Integer":
+                    return Integer.valueOf(value);
+                case "Long":
+                    return Long.valueOf(value);
+                case "Float":
+                    return Float.valueOf(value);
+                case "Double":
+                    return Double.valueOf(value);
+                case "Date":
+                    return value.matches("((^((1[8-9]\\d{2})|([2-9]\\d{3}))([-\\/\\._])(10|12|0?[13578])([-\\/\\._])(3[01]|[12][0-9]|0?[1-9])$)|(^((1[8-9]\\d{2})|([2-9]\\d{3}))([-\\/\\._])(11|0?[469])([-\\/\\._])(30|[12][0-9]|0?[1-9])$)|(^((1[8-9]\\d{2})|([2-9]\\d{3}))([-\\/\\._])(0?2)([-\\/\\._])(2[0-8]|1[0-9]|0?[1-9])$)|(^([2468][048]00)([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([3579][26]00)([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([1][89][0][48])([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([2-9][0-9][0][48])([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([1][89][2468][048])([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([2-9][0-9][2468][048])([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([1][89][13579][26])([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([2-9][0-9][13579][26])([-\\/\\._])(0?2)([-\\/\\._])(29)$))")
+                            ?
+                            DateFormat.getDateInstance().parse(value) != null
+                            : false;
+                case "Boolean":
+                    return Boolean.valueOf(value);
+                case "BigDecimal":
+                    return new BigDecimal(value);
+                case "Timestamp":
+                    return Timestamp.valueOf(value);
+            }
+        } catch (Exception e) {
+        }
+        return null;
     }
 
     private StructField getSchemaField(String fieldName, String fieldType) {
@@ -683,7 +855,7 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
     }
 
     private boolean existsTableFamily(String tableName, String family) {
-        if ((!existsHTable(tableName)) || hTableInfoMeta.get(tableName).get(tableName).get(family) == null) {
+        if ((!existsHTable(tableName)) || hTableInfoMeta.get(tableName).get(family) == null) {
             return false;
         }
         return true;
@@ -697,10 +869,10 @@ public class BeanGetter implements Serializable, MetaGetterRegistry {
         try {
             for (Object o : obj) {
                 if (isNull(o)) {
-                    return false;
+                    return true;
                 }
             }
-            return true;
+            return false;
         } catch (Exception e) {
             return false;
         }

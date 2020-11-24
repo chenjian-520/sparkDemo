@@ -1,0 +1,50 @@
+[
+    {
+        "siteCode":"WH",
+        "levelCode": "L5",
+        "customer": "ALL",
+        "fail": "0",
+        "newStationCode": "PACKING",
+        "oldStationCode" : "PACKING"
+    },
+    {
+        "siteCode":"WH",
+        "levelCode": "L6",
+        "customer": "ALL",
+        "fail": "0",
+        "newStationCode": "PACKING",
+        "oldStationCode" : "PACKING"
+    },
+    {
+        "siteCode":"WH",
+        "levelCode": "L10",
+        "customer": "Lenovo",
+        "fail": "0",
+        "newStationCode": "test",
+        "oldStationCode" : "Testing"
+    },
+    {
+        "siteCode":"WH",
+        "levelCode": "L10",
+        "customer": "HP",
+        "fail": "0",
+        "newStationCode": "test",
+        "oldStationCode" : "PREPEST"
+    },
+    {
+        "siteCode":"WH",
+        "levelCode": "L10",
+        "customer": "HP",
+        "fail": "0",
+        "newStationCode": "test",
+        "oldStationCode" : "POST RUNIN"
+    },
+    {
+        "siteCode":"WH",
+        "levelCode": "L10",
+        "fail": "0",
+        "customer": "Lenovo",
+        "newStationCode": "packing",
+        "oldStationCode": "SCAN COUNTRY KIT"
+    }
+]

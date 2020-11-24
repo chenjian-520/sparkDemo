@@ -1,8 +1,0 @@
-{
-  "dprunclass": "com.foxconn.dpm.ods_dwd.OdsToDwdSparkIn",
-  "dpuserid": "0ad735dc-f1d6-44c9-bdb1-5ce86b2e760f",
-  "dpmaster": "local[*]",
-  "dpappName": "datamanager2",
-  "pmClass": "com.tm.dl.javasdk.dpspark.common.ProdPermissionManager",
-  "dpType": "scheduling"
-}

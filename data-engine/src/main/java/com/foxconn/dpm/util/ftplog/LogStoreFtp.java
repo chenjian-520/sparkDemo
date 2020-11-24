@@ -41,7 +41,6 @@ public class LogStoreFtp implements Serializable, FtpLog {
             if (StaticNestedInstance.proxyInstance.messages != null) {
                 StaticNestedInstance.proxyInstance.messages.add(e.getStackTrace().toString());
             } else {
-                e.printStackTrace();
             }
         }
         return false;
@@ -74,7 +73,6 @@ public class LogStoreFtp implements Serializable, FtpLog {
                 this.messages.add(System.currentTimeMillis() + "=============>>" + message);
                 return false;
             } else {
-                System.out.println("=============>>Log Success<<=============");
                 return true;
             }
         }
@@ -156,7 +154,6 @@ public class LogStoreFtp implements Serializable, FtpLog {
             try {
                 this.ftpClientInstance.logout();
             } catch (IOException e) {
-                e.printStackTrace();
             }
         }
     }
@@ -248,7 +245,6 @@ public class LogStoreFtp implements Serializable, FtpLog {
                     });
                     ftpProperties = ftpPropertiesTmep;
                 } catch (IOException e) {
-                    e.printStackTrace();
                     return;
                 }
             }
@@ -284,6 +280,7 @@ public class LogStoreFtp implements Serializable, FtpLog {
         this.logFileName = newFileName;
     }
 
+    @Override
     public void setIsAsynchronousLog(boolean isAsynchronousLog) {
         StaticNestedInstance.realInstance.isAsynchronousLog = isAsynchronousLog;
     }

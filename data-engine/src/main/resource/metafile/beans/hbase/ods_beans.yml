@@ -1,0 +1,487 @@
+#=======================================================================================================================
+#
+#             DSN     过站信息
+#
+#=======================================================================================================================
+dpm_ods_production_output_day_lfive:
+    DPM_ODS_PRODUCTION_OUTPUT_DAY_LFIVE:
+       - BUCode=String
+       - PlantCode=String
+       - AreaCode=String
+       - ShiftCode=String
+       - LineCode=String
+       - WorkDate=String
+       - WO=String
+       - WOType=String
+       - PartNo=String
+       - Customer=String
+       - ModelNo=String
+       - SN=String
+       - StationCode=String
+       - StationName=String
+       - IsPass=Integer
+       - IsFail=Integer
+       - ScanBy=String
+       - ScanDT=String
+
+dpm_ods_production_output_day_lsix:
+    DPM_ODS_PRODUCTION_OUTPUT_DAY_LSIX:
+      - Rowkey=String
+      - site_code=String
+      - level_code=String
+      - factory_code=String
+      - process_code=String
+      - area_code=String
+      - line_code=String
+      - work_shift=String
+      - work_dt=String
+      - customer=String
+      - wo=String
+      - part_no=String
+      - model_no=String
+      - sn=String
+      - station_code=String
+      - station_name=String
+      - is_pass=String
+      - is_fail=String
+      - scan_by=String
+      - scan_dt=String
+      - update_dt=String
+      - update_by=String
+      - data_from=String
+
+dpm_ods_production_output_day_lten:
+    DPM_ODS_PRODUCTION_OUTPUT_DAY_LTEN:
+       - Rowkey=String
+       - site_code=String
+       - level_code=String
+       - factory_code=String
+       - process_code=String
+       - area_code=String
+       - line_code=String
+       - work_shift=String
+       - work_dt=String
+       - wo=String
+       - workorder_type=String
+       - part_no=String
+       - customer=String
+       - model_no=String
+       - sn=String
+       - station_code=String
+       - station_name=String
+       - is_pass=String
+       - is_fail=String
+       - scan_by=String
+       - scan_dt=String
+       - update_dt=String
+       - update_by=String
+       - data_from=String
+
+
+dpm_ods_production_repair_day_lten:
+    DPM_ODS_PRODUCTION_REPAIR_DAY_LTEN:
+       - site_code=String
+       - area_code=String
+       - line_code=String
+       - work_shift=String
+       - work_dt=String
+       - part_no=String
+       - customer=String
+       - model_no=String
+       - wo=String
+       - sn=String
+       - repair_in_dt=String
+       - fail_code=String
+       - fail_desc=String
+       - repair_out_dt=String
+       - fail_station=String
+       - repair_code=String
+       - repair_code_desc=String
+       - bu_code=String
+       - update_dt=String
+
+dpm_ods_production_repair_day_lsix:
+    DPM_ODS_PRODUCTION_REPAIR_DAY_LSIX:
+       - site_code=String
+       - area_code=String
+       - line_code=String
+       - work_shift=String
+       - work_dt=String
+       - part_no=String
+       - customer=String
+       - model_no=String
+       - wo=String
+       - sn=String
+       - repair_in_dt=String
+       - fail_code=String
+       - fail_desc=String
+       - repair_out_dt=String
+       - fail_station=String
+       - repair_code=String
+       - repair_code_desc=String
+       - bu_code=String
+       - update_dt=String
+
+
+#=======================================================================================================================
+dpm_ods_production_target_values:
+  DPM_ODS_PRODUCTION_TARGET_VALUE:
+      - day_id=String
+      - group_code=String
+      - site_code=String
+      - bu_code=String
+      - factory_code=String
+      - process_code=String
+      - line_code=String
+      - machine_id=String
+      - online_dl_upph=String
+      - offline_var_dl_upph=String
+      - offline_fix_dl_headcount=String
+      - idl=String
+      - schedule_adherence=String
+      - otd=String
+      - oee1=String
+      - oee2=String
+      - fpy=String
+      - uph=String
+      - turnover=String
+      - attendance=String
+      - safety=String
+      - update_dt=String
+      - update_by=String
+      - data_from=String
+      - customer=String
+
+dpm_ods_personnel_hr_mbu_definition:
+  DPM_ODS_PERSONNEL_HR_MBU_DEFINITION:
+    - Rowkey=String
+    - site_code=String
+    - factory_code=String
+    - department=String
+    - product=String
+    - function_department=String
+    - level_code=String
+    - update_dt=String
+    - update_by=String
+    - data_from=String
+
+######################################################
+#   SA
+######################################################
+
+dpm_ods_production_planning_day:
+  DPM_ODS_PRODUCTION_PLANNING_DAY:
+    - site_code=String
+    - level_code=String
+    - factory_code=String
+    - process_code=String
+    - area_code=String
+    - line_code=String
+    - machine_id=String
+    - work_dt=String
+    - work_shift=String
+    - customer=String
+    - key=String
+    - schedule_qty=String
+    - update_dt=String
+    - update_by=String
+    - data_from=String
+
+#####################################################################
+#   OTD
+#####################################################################
+
+dpm_ods_production_edidesadvmain:
+  DPM_ODS_PRODUCTION_EDIDESADVMAIN:
+    - shiporderno=String
+    - idocno=String
+    - pono=String
+    - sono=String
+    - totalweight=String
+    - weightunit=String
+    - plantcode=String
+    - shipdt=String
+    - customercode=String
+    - custshiporderno=String
+    - invoiceno=String
+    - mfdn=String
+    - update_dt=String
+    - update_by=String
+    - data_from=String
+
+dpm_ods_production_edidesadvdetail:
+  DPM_ODS_PRODUCTION_EDIDESADVDETAIL:
+    - shiporderno=String
+    - pono=String
+    - polineno=String
+    - customerpartno=String
+    - shippedqty=String
+    - grossweight=String
+    - mfdn=String
+    - update_dt=String
+    - update_by=String
+    - data_from=String
+
+dpm_ods_production_scm_hp_commit_ship:
+  DPM_ODS_PRODUCTION_SCM_HP_COMMIT_SHIP:
+    - pack_id_line_item_unit_qty=String
+    - region=String
+    - duty_code=String
+    - sub_region=String
+    - dest_code=String
+    - ship_to_country_code=String
+    - ship_to_state=String
+    - ship_to_city=String
+    - ship_to_zip=String
+    - ship_ref=String
+    - customer_id=String
+    - ship_to_id=String
+    - hp_so=String
+    - hp_so_line_item=String
+    - hp_po=String
+    - hp_po_line_item=String
+    - hp_pn=String
+    - prod_desc_base=String
+    - edi_shipping_point=String
+    - edi_distrib_channel=String
+    - edi_distrib_chan_sub=String
+    - edi_phc=String
+    - edi_carrier_qualifier=String
+    - edi_intl_carrier=String
+    - edi_ship_mode=String
+    - edi_pl_code=String
+    - edi_mfg_code=String
+    - edi_trans_serv_level=String
+    - pack_id=String
+    - sched_ship_date=String
+    - npi_exception_id=String
+    - multi_line_id=String
+    - box_size_id=String
+    - pallet_size_id=String
+    - pack_id_line_item_plt_fill_qty=String
+    - eccn=String
+    - packid_line_item_unit_weight=String
+    - order_type=String
+    - sales_chan=String
+    - ship_mode=String
+    - ship_cat_type=String
+    - ship_cat_loop=String
+    - mand_carrier_id=String
+    - trans_serv_level=String
+    - pref_gateway=String
+    - area_group_id=String
+    - hp_except=String
+    - phys_consol=String
+    - max_pallet_waybill=String
+    - intl_carrier=String
+    - pack_id_line_item_final_grp_id=String
+    - pallet_qty_per_final_group=String
+    - waybill_number=String
+    - pack_id_line_item_phys_grpid=String
+    - hawb_est_weight=String
+    - hawb_unit_qty=String
+    - hawb_box_qty=String
+    - hawb_pallet_qty=String
+    - hawb_dimension=String
+    - hawb_act_weight=String
+    - packid_act_weight=String
+    - pack_id_line_item_box_qty=String
+    - pack_id_line_item_pallet_qty=String
+    - pack_id_line_item_dimension=String
+    - prod_type=String
+    - odm_pn=String
+    - ship_to_name=String
+    - ship_to_street=String
+    - cust_po=String
+    - odm_internal_delivery_number=String
+    - precustoms_clearance_id=String
+    - remarks=String
+    - weight_uom=String
+    - dimension_uom=String
+    - actual_shipdate=String
+    - pack_id_line_item_value=String
+    - pack_id_line_item_currency=String
+    - pack_id_line_item_packing_info=String
+    - shipping_site=String
+    - odm01=String
+    - odm02=String
+    - odm03=String
+    - odm04=String
+    - odm05=String
+    - odm06=String
+    - odm07=String
+    - odm08=String
+    - odm09=String
+    - odm10=String
+    - master_waybill_number=String
+    - dspoversion=String
+    - tosap=String
+    - tosapdate=String
+    - tosapby=String
+    - errmsgfromsap=String
+    - tosfc=String
+    - tosfcdate=String
+    - tosfcby=String
+    - errmsgfromsfc=String
+    - sono=String
+    - soitem=String
+    - owner=String
+    - actualshipdate=String
+    - totactweightbywb=String
+    - totactweightbypack=String
+    - value=String
+    - currency=String
+    - max_pallet_adj=String
+    - r11_order_commit=String
+    - pallet_size_reassign_id=String
+    - ssd_reassignment=String
+    - odm_phys_consol=String
+    - order_group_id=String
+    - pack_id_line_item_bbx_fill_qty=String
+    - hp01=String
+    - hp02=String
+    - hp03=String
+    - hp04=String
+    - hp05=String
+    - hp06=String
+    - hp07=String
+    - hp08=String
+    - hp09=String
+    - hp10=String
+    - seal_id=String
+    - status=String
+    - createdate=String
+    - port_of_origin_ship_date=String
+    - master_waybill_container_type_qty=String
+    - container_id=String
+    - condition_group_id=String
+    - max_value_container=String
+    - fulfill_model=String
+    - edi_incoterm=String
+    - hwb_cbm=String
+    - hs_code=String
+    - pallet_footprint_cat=String
+    - container_footprint=String
+    - shipment_group_id=String
+    - mixed_footprint_indicator=String
+    - container_fill_rate=String
+    - order_priority=String
+    - target_ship_date=String
+    - factory_priority=String
+    - shipment_status=String
+    - logistics_priority=String
+    - pallet_height_fill_qty=String
+    - pallet_group_id=String
+    - flat_top=String
+    - mpa_ref=String
+    - edi_order_date=String
+    - gi_date=String
+    - ic_po=String
+    - special_order_indicator=String
+    - phys_grp_flat_top=String
+    - odm_pltgrp_consol=String
+    - top_layer_min_fillrate=String
+    - max_box_qty_layer=String
+    - box_height=String
+    - pallet_height=String
+    - ship_to_name_2=String
+    - ship_to_name_3=String
+    - ship_hold=String
+    - customer_so=String
+    - customer_so_line_item=String
+    - update_dt=String
+    - update_by=String
+    - data_from=String
+
+dpm_ods_production_scm_lenovo_commit_ship:
+  DPM_ODS_PRODUCTION_SCM_LENOVO_COMMIT_SHIP:
+    - plantcode=String
+    - shipdate=String
+    - region=String
+    - customerpo=String
+    - customerpoitem=String
+    - saporder=String
+    - hfjdn=String
+    - hfjdnitem=String
+    - partno=String
+    - desc=String
+    - dnqty=String
+    - carrier=String
+    - route=String
+    - hawb=String
+    - bol=String
+    - shiptocountry=String
+    - geo=String
+    - subgeo=String
+    - mot=String
+    - box_size_id=String
+    - shipmode=String
+    - shore=String
+    - hfjso=String
+    - endcustomerpo=String
+    - shiptoname=String
+    - shiptoaddress=String
+    - postalcode=String
+    - state=String
+    - city=String
+    - contact=String
+    - crad=String
+    - netweight=String
+    - grossweight=String
+    - weightunit=String
+    - salesorganization=String
+    - dnitem_dimension=String
+    - dnitem_weight=String
+    - tosap=String
+    - tosapdate=String
+    - tosapby=String
+    - errmsgfromsap=String
+    - tosfc=String
+    - tosfcdate=String
+    - tosfcby=String
+    - errmsgfromsfc=String
+    - dspoversion=String
+    - modifiedby=String
+    - modifieddate=String
+    - pallettypecount=String
+    - cartoncount=String
+    - palletid=String
+    - truckid=String
+    - palletcount=String
+    - update_dt=String
+    - update_by=String
+    - data_from=String
+
+dpm_ods_production_ediordersdetail:
+  DPM_ODS_PRODUCTION_EDIORDERSDETAIL:
+    - pono=String
+    - orderedqty=String
+    - uom=String
+    - customerpartno=String
+    - polineno=String
+    - solineno=String
+    - unitprice=String
+    - commitshipdate=String
+    - itemcategory=String
+    - update_dt=String
+    - update_by=String
+    - data_from=String
+
+dpm_ods_production_ediordersparty:
+  DPM_ODS_PRODUCTION_EDIORDERSPARTY:
+    - pono=String
+    - partyqualifier=String
+    - entityname=String
+    - partyid=String
+    - partyname1=String
+    - partyname2=String
+    - nameaddressline1=String
+    - nameaddressline2=String
+    - cityname=String
+    - statecode=String
+    - uszipcode=String
+    - countrycode=String
+    - countryname=String
+    - update_dt=String
+    - update_by=String
+    - data_from=String

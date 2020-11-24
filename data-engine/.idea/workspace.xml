@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="data-engine:jar" />
+      <artifact name="sparkETL" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="055187d6-6255-45ac-9b08-0118dfba01a1" name="Default" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
+    <list default="true" id="2e2104ce-a229-411b-b0b0-f25fc7e5aa48" name="Default" comment="2020-07-20 l10 uph line">
+      <change beforePath="$PROJECT_DIR$/../SFC/F20_DPM_ETL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SFC/F20_DPM_ETL/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SFC/F20_DPM_ETL/src/main/java/F20_DPM_ETL/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SFC/F20_DPM_ETL/src/main/java/F20_DPM_ETL/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SFC/F20_DPM_ETL_New/F20_DPM_ETL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SFC/F20_DPM_ETL_New/F20_DPM_ETL/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,9 +22,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/dataengine$com_tm_dl_javasdk_dpspark_DPSparkApp.coverage" NAME="com.tm.dl.javasdk.dpspark.DPSparkApp Coverage Results" MODIFIED="1578042779396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -30,187 +34,111 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="QA_ADS_10.60.136.155" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="QA_ADS_10.60.136.155" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="QA_ADS_10.60.136.155" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="dp_ads: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-    </expand>
+    <expand />
     <select />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="dataengine" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DayOutPutCalculate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/DayOutPutCalculate.java">
+      <file leaf-file-name="DpMysql.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/DpMysql.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4554">
-              <caret line="232" column="90" selection-start-line="232" selection-start-column="82" selection-end-line="232" selection-end-column="94" />
+            <state relative-caret-position="377">
+              <caret line="124" column="25" lean-forward="true" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BatchGetter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/batchData/BatchGetter.java">
+      <file leaf-file-name="DPSparkApp.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/com/tm/dl/javasdk/dpspark/DPSparkApp.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1771">
-              <caret line="391" column="34" selection-start-line="391" selection-start-column="34" selection-end-line="391" selection-end-column="34" />
+            <state relative-caret-position="285">
+              <caret line="85" column="52" selection-start-line="85" selection-start-column="36" selection-end-line="85" selection-end-column="52" />
               <folding>
-                <element signature="initializer##0;class#BatchGetter#0" />
-                <element signature="e#2514#3649#0" />
-                <element signature="e#3655#4273#0" />
-                <element signature="e#4414#4904#0" />
-                <element signature="e#4910#5959#0" />
-                <element signature="e#5966#7897#0" />
-                <element signature="e#7903#11318#0" />
-                <element signature="e#11324#12433#0" />
-                <element signature="e#12439#12658#0" />
-                <element signature="e#12945#14999#0" />
-                <element signature="e#15005#15929#0" />
-                <element signature="e#15935#16081#0" />
-                <element signature="e#16249#17203#0" />
-                <element signature="e#17209#17350#0" />
-                <element signature="e#17356#18146#0" />
-                <element signature="e#18153#18928#0" />
-                <element signature="e#18934#19601#0" />
-                <element signature="e#19607#20531#0" />
-                <element signature="e#20537#20803#0" />
-                <element signature="e#20809#21002#0" />
-                <element signature="e#21008#21656#0" />
-                <element signature="e#21662#22279#0" />
-                <element signature="e#22285#22935#0" />
-                <element signature="e#22941#23665#0" />
-                <element signature="e#23671#23842#0" />
-                <element signature="e#23848#24341#0" />
-                <element signature="e#24347#24512#0" />
-                <element signature="e#24518#25001#0" />
-                <element signature="e#25007#25483#0" />
-                <element signature="e#25489#25971#0" />
-                <element signature="e#25977#26453#0" />
-                <element signature="e#26460#26899#0" />
-                <element signature="e#27037#27473#0" />
-                <element signature="e#27479#27608#0" />
-                <element signature="e#27614#28048#0" />
-                <element signature="e#28054#28476#0" />
-                <element signature="e#28482#28680#0" />
-                <element signature="e#28686#29889#0" />
-                <element signature="e#29895#30750#0" />
-                <element signature="e#30756#30886#0" />
-                <element signature="e#30892#31511#0" />
-                <element signature="e#31517#31763#0" />
-                <element signature="e#31769#32306#0" />
-                <element signature="e#32312#32518#0" />
-                <element signature="e#32524#32771#0" />
-                <element signature="e#33063#33676#0" />
-                <element signature="e#33682#33898#0" />
-                <element signature="e#33904#34255#0" />
-                <element signature="e#34261#34672#0" />
-                <element signature="e#35636#36165#0" />
-                <element signature="e#37599#38110#0" />
-                <element signature="e#38116#38478#0" />
-                <element signature="e#38485#38619#0" />
-                <element signature="e#38625#38751#0" />
-                <element signature="e#38856#38967#0" />
+                <element signature="e#14193#14194#0" expanded="true" />
+                <element signature="e#14265#14266#0" expanded="true" />
+                <element signature="e#14312#14313#0" expanded="true" />
+                <element signature="e#14380#14381#0" expanded="true" />
+                <element signature="e#14525#14526#0" expanded="true" />
+                <element signature="e#14560#14561#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductionUpphSprintFive.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dws_ads/ProductionUpphSprintFive.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JavaSparkContext.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/org/apache/spark/api/java/JavaSparkContext.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="577">
+              <caret line="97" column="15" selection-start-line="97" selection-start-column="15" selection-end-line="97" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DPSqlServer.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/com/tm/dl/javasdk/dpspark/sqlserver/DPSqlServer.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2290">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DPHbase.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/com/tm/dl/javasdk/dpspark/hbase/DPHbase.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-552">
+              <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DayOutPutCalculate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dwd_dws/DayOutPutCalculate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="291" lean-forward="true" selection-start-line="291" selection-end-line="291" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="CalculateYearWeek.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/udf/CalculateYearWeek.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dwd_dws/udf/CalculateYearWeek.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
               <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DailyRepairCaculate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dwd_dws/DailyRepairCaculate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-31">
+              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="L6Oee1DwdToDws.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dwd_dws/L6Oee1DwdToDws.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4392">
+              <caret line="53" column="84" lean-forward="true" selection-start-line="53" selection-start-column="84" selection-end-line="53" selection-end-column="84" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#l6OeeCalculateCQ#0;class#L6Oee1DwdToDws#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LevelDayOutPut.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/temporary/LevelDayOutPut.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36386">
-              <caret line="1615" column="53" selection-start-line="1615" selection-start-column="53" selection-end-line="1615" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#9388#9585#0" />
-                <element signature="e#9591#9828#0" />
-                <element signature="e#10451#10497#0" />
-                <element signature="e#10505#10736#0" />
-                <element signature="e#10802#10855#0" />
-                <element signature="e#12101#12147#0" />
-                <element signature="e#12153#12194#0" />
-                <element signature="e#12203#12249#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calcute_l5_6_10_quarter_upph.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_quarter_upph.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4784">
-              <caret line="208" column="123" selection-start-line="208" selection-start-column="116" selection-end-line="208" selection-end-column="123" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calcute_l5_6_10_year_upph.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_year_upph.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="186" column="41" lean-forward="true" selection-start-line="186" selection-start-column="41" selection-end-line="186" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calcute_l5_6_10_week_upph.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_week_upph.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5152">
-              <caret line="224" column="41" selection-start-line="224" selection-start-column="41" selection-end-line="224" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EHR_MAN_HOUR.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/beans/EHR_MAN_HOUR.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calcute_l5_6_10_day_upph.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_day_upph.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4370">
-              <caret line="190" column="30" selection-start-line="190" selection-start-column="30" selection-end-line="190" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calcute_l5_6_10_month_upph.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_month_upph.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4232">
-              <caret line="184" column="69" selection-start-line="184" selection-start-column="69" selection-end-line="184" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -220,127 +148,130 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>week</find>
-      <find>getStDateWeek</find>
-      <find>Week</find>
-      <find>formatNumber</find>
-      <find>to_unixtimestamp</find>
-      <find>to_unix_timestamp</find>
-      <find>L5_6_10.online_dl_upph_target</find>
-      <find>L5_6_10.offline_fix_dl_headcount_target</find>
-      <find>ehr_man_hour.week_id</find>
-      <find>dateStrCompare</find>
-      <find>salt</find>
-      <find>dpm_dws_if_m_dop</find>
-      <find>hGetter.saltRead</find>
-      <find>switch</find>
-      <find>week_id</find>
-      <find>Quarter</find>
-      <find>工聚类</find>
-      <find>month</find>
-      <find>getPut</find>
-      <find>dpm_dwd_production_output_day</find>
-      <find>DPM_DWD_PRODUCTION_OUTPUT_DAY</find>
-      <find>saltRddRead</find>
-      <find>dpm_ods_production_output_day_lten</find>
-      <find>DPM_ODS_PRODUCTION_OUTPUT_DAY_LTEN</find>
-      <find>ModelNo</find>
-      <find>rowDataset</find>
-      <find>DPMysql.rddRead</find>
-      <find>sortBy</find>
-      <find>CalculateYearWeek</find>
-      <find>getStDateQuarter</find>
+      <find>24*7</find>
+      <find>JAVA_HOME</find>
+      <find>DPHbase.rddRead</find>
+      <find>DPHbase.saltRddRead</find>
+      <find>-(60*60*24)</find>
+      <find>cn.hutool</find>
+      <find>==============================&gt;&gt;&gt;lineInfoDay End&lt;&lt;&lt;==============================</find>
+      <find>work_dt</find>
+      <find>dpm_dws_personnel_emp_workhours_dd</find>
+      <find>endStamp</find>
+      <find>fastjson</find>
+      <find>EEPAIR</find>
+      <find>dpm_dws_production_partno_dd</find>
+      <find>uphPartnoDay</find>
+      <find>DailyRepairCaculate</find>
+      <find>output_qty_actual</find>
+      <find>yesterdayStamp</find>
+      <find>c_ct_s</find>
+      <find>line_code</find>
+      <find>L6FpyLineView</find>
+      <find>collect</find>
+      <find>con</find>
+      <find>l6FpyLineFilterView</find>
+      <find>FpyLineFilterDayView</find>
+      <find>dpmDwsProductionOutputDDJavaRDD</find>
+      <find>dpm_ods_production_target_values</find>
+      <find>ProductionOutputDayToHours.json</find>
+      <find>ProductionMachineMaintenance.json</find>
+      <find>sessionBroadcast</find>
+      <find>context</find>
     </findStrings>
     <replaceStrings>
-      <replace>DPM_IF_M_DSN_BATCH</replace>
-      <replace>getBatchGetter(true)</replace>
-      <replace>getBatchGetter()</replace>
-      <replace>Double</replace>
-      <replace>BUCode</replace>
-      <replace>WorkDate</replace>
-      <replace>Date</replace>
-      <replace>batchGetter.getStDataMiniteAdd(-5)</replace>
-      <replace>batchGetter.getStDataMiniteAdd(-6)</replace>
-      <replace>nvl</replace>
-      <replace>1</replace>
-      <replace>String</replace>
-      <replace>Long</replace>
-      <replace>new GregorianCalendar();</replace>
-      <replace>Calendar.getInstance(TimeZone.getDefault());</replace>
-      <replace>Calendar.getInstance();</replace>
-      <replace>production_station_dsn_rdd</replace>
-      <replace>DPM_ODS_PRODUCTION_OUTPUT_DAY_LSIX</replace>
-      <replace>dpm_dws_dsn_day_output</replace>
-      <replace>Key</replace>
-      <replace>LevelCode</replace>
-      <replace>LevelCodedpm_dws_dsn_day_output.WorkDT</replace>
-      <replace>Tuple9</replace>
-      <replace>t9</replace>
-      <replace>工具类</replace>
-      <replace>=</replace>
-      <replace>DPHbase.saltRddRead</replace>
+      <replace>station_code</replace>
+      <replace>four</replace>
+      <replace>PersonalWorkHourCalculateSprintFour</replace>
+      <replace />
+      <replace>/</replace>
+      <replace>(24*if(CalculteQuarterDay(from_unixtime((unix_timestamp()), 'yyyy-MM-dd'))=0,1,CalculteQuarterDay(from_unixtime((unix_timestamp()), 'yyyy-MM-dd'))))</replace>
+      <replace>(24*if(CalculteYearDay(from_unixtime((unix_timestamp()), 'yyyy-MM-dd'))=0,1,CalculteYearDay(from_unixtime((unix_timestamp()), 'yyyy-MM-dd'))))</replace>
+      <replace>24*7</replace>
+      <replace>(24*if(CalculteMonthDay(from_unixtime((unix_timestamp()), 'yyyy-MM-dd'))=0,1,CalculteMonthDay(from_unixtime((unix_timestamp()), 'yyyy-MM-dd'))))</replace>
+      <replace>24*if(CalculteMonthDay(from_unixtime((unix_timestamp()), 'yyyy-MM-dd'))=0,1,CalculteMonthDay(from_unixtime((unix_timestamp()), 'yyyy-MM-dd')))</replace>
+      <replace>24*if(CalculteQuarterDay(from_unixtime((unix_timestamp()), 'yyyy-MM-dd'))=0,1,CalculteQuarterDay(from_unixtime((unix_timestamp()), 'yyyy-MM-dd')))</replace>
+      <replace>7</replace>
+      <replace>24*if(CalculteWeekDay(from_unixtime((unix_timestamp()), 'yyyy-MM-dd'))=0,1,CalculteWeekDay(from_unixtime((unix_timestamp()), 'yyyy-MM-dd')))</replace>
+      <replace>24*if(CalculteYearDay(from_unixtime((unix_timestamp()), 'yyyy-MM-dd'))=0,1,CalculteYearDay(from_unixtime((unix_timestamp()), 'yyyy-MM-dd')))</replace>
+      <replace>month_id</replace>
+      <replace>quarter_id</replace>
+      <replace>year_id</replace>
+      <replace>get_aim_target_by_key</replace>
+      <replace>DPMysql.commonOdbcWriteBatch(</replace>
+      <replace>DPMysql.commonOdbcWriteBatch(&quot;dp_ads&quot;,</replace>
+      <replace>2</replace>
+      <replace>DpStreaming</replace>
+      <replace>D1S</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>com.foxconn.dpm.sprint4.dwd_dws.PersonalWorkHourCalculateSprintFour</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/ScalaTest.scala" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/beans/ManualHour.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/beans/DayDop.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/test.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/bk/L5ExcelUpph.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/unuse/bk/L5ExcelUpph.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/temparary/LevelDayOutPut.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/temporary/beans/DayDop.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/batchData/RowDataUtil.scala" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/batchData/BatchGetter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/batchData/BatchGetterFY.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/beans/dim_beans.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/beans/DsnDayOutPut.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/beans/dws_beans.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/beanstruct/ScalaBeanGetter.scala" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_dws/dpm_dws_dsn_day_output_calculate.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/L5ExcelUpph.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/DayOutPutCalculate.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_ads/calcute_year_kpi.sql" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_ads/calcute_quarter_kpi.sql" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_ads/calcute_month_kpi.sql" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_ads/calcute_week_kpi.sql" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_ads/calcute_day_kpi.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/DWDHelp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/DataCleanHelp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/DataCleanHelp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/beanstruct/BeanGetter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/udf/CalculateYearWeekEx.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/beans/EHR_MAN_HOUR.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/hbaseread/HGetter.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_day_upph.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/udf/FormatFloatNumber.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/PersonalWorkHourCalculate.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_day_output.sql" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_week_upph.sql" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_month_upph.sql" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_quarter_upph.sql" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_year_upph.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/TestRandom.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/batchData/BatchGetter.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/beans/ods_beans.yml" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/beans/dwd_beans.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/ods_dwd/ProductionStationDSN.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile.properties" />
-        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l10_day_output.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint5/sql_ads/l6_uphLine_week_ads.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint5/sql_ads/l6_uphLine_year_ads.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/ods_dwd/ProductionSteamingDwsToAds.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/ods_dwd/bean/DWDProductionOutputStreaming.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/ods_dwd/bean/ODSProductionlfiveStreaming.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/ods_dwd/ProductionSteamingdwdTodws.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint4/dws_ads/L10ProductionOTDSprintFour.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dws_ads/L5ProductionOee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dwd_dws/TurnoverCalculate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/ods_dwd/EhrDwd.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint4/dws_ads/L5HrAttendanceKpi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint3/dwd_dws/DayOutPutCalculateSprintThree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/ods_dwd/ProductionStationDSN.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dwd_dws/PassStationCaculate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/ods_dwd/L6Oee1Dwd.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint5/sql_ads/sprint_five_l10_fpy_quarter_ads.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint5/sql_ads/sprint_five_l10_fpy_week_ads.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint5/sql_ads/sprint_five_l10_fpy_day_ads.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint5/sql_ads/sprint_five_l10_fpy_month_ads.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint5/sql_ads/sprint_five_l10_fpy_year_ads.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/ods_dwd/ProductionSteaming.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dws_ads/L10FpyCalculateSprintFourToLine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dws_ads/FtyDwsToAdsSix.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint5/sql_ads/l6_uphLine_lastweek_ads.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dws_ads/ProductionUpphSprintFive.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/DSNUPPHCalculate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/udf/CalculateYearWeek.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/temporary/LevelDayOutPut.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint3/sql_ads/sprint_three_l10_day_uph_ads.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint3/dws_ads/L10UphactualCalculateSprintThree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dws_ads/L10UphactualCalculateSprintFourToLine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dwd_dws/L6Oee1DwdToDws.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint3/dwd_dws/Equipment_OeeL6DwdToDws.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint3/ods_dwd/Equipment_OeeL6.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint5/sql_ads/sprint_five_l10_uph_day_ads.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint5/sql_ads/sprint_five_l10_uph_lastweek_ads.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint5/sql_ads/sprint_five_l10_uph_month_ads.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint5/sql_ads/sprint_five_l10_uph_quarter_ads.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint5/sql_ads/sprint_five_l10_uph_week_ads.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint5/sql_ads/sprint_five_l10_uph_year_ads.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dws_ads/HrHeadcountKpi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint3/dws_ads/L6Oee2Line.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint1-2/sql_ads/L6Oee2LineYear.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint1-2/sql_ads/L6Oee2LineWeek.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint1-2/sql_ads/L6Oee2LineQuarter.sql" />
+        <option value="$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint1-2/sql_ads/L6Oee2LineMonth.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint3/dws_ads/L6FpyLine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dws_ads/ProductionMachineMaintenance.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dws_ads/HrTurnoverKpi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dws_ads/HrAttendanceKpi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dws_ads/L6UphToLine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/DpMysql.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dwd_dws/DayOutPutCalculate.java" />
       </list>
     </option>
   </component>
@@ -355,6 +286,7 @@
       <MavenGeneralSettings>
         <option name="mavenHome" value="F:/javaEE/Java EE/svn/maven/apache-maven-3.5.2" />
         <option name="userSettingsFile" value="F:\javaEE\Java EE\svn\maven\apache-maven-3.5.2\conf\settings.xml" />
+        <option name="workOffline" value="true" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -375,82 +307,83 @@
           <item name="data-engine" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="data-engine" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="data-engine" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
       </expand>
       <select />
     </treeState>
   </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8 (2)" />
+    <option name="vmOptions" value="-Dmaven.multiModuleProjectDirectory=$M2_HOME" />
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="330" />
-    <option name="y" value="28" />
-    <option name="width" value="1480" />
-    <option name="height" value="856" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="340" />
+    <option name="y" value="52" />
+    <option name="width" value="1484" />
+    <option name="height" value="926" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
-      <autoscrollFromSource ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="data-engine" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="data-engine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="data-engine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="data-engine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="data-engine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="data-engine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="foxconn" type="462c0819:PsiDirectoryNode" />
-              <item name="dpm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="data-engine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -458,10 +391,32 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="foxconn" type="462c0819:PsiDirectoryNode" />
               <item name="dpm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint1_2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint1_2" type="462c0819:PsiDirectoryNode" />
               <item name="dwd_dws" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="data-engine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -469,23 +424,12 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="foxconn" type="462c0819:PsiDirectoryNode" />
               <item name="dpm" type="462c0819:PsiDirectoryNode" />
-              <item name="dwd_dws" type="462c0819:PsiDirectoryNode" />
-              <item name="beans" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
-              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint1_2" type="462c0819:PsiDirectoryNode" />
               <item name="dwd_dws" type="462c0819:PsiDirectoryNode" />
               <item name="udf" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="data-engine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -493,10 +437,11 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="foxconn" type="462c0819:PsiDirectoryNode" />
               <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint1_2" type="462c0819:PsiDirectoryNode" />
               <item name="dws_ads" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="data-engine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -504,10 +449,11 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="foxconn" type="462c0819:PsiDirectoryNode" />
               <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint1_2" type="462c0819:PsiDirectoryNode" />
               <item name="ods_dwd" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="data-engine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -515,17 +461,163 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="foxconn" type="462c0819:PsiDirectoryNode" />
               <item name="dpm" type="462c0819:PsiDirectoryNode" />
-              <item name="temporary" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint3" type="462c0819:PsiDirectoryNode" />
+              <item name="dws_ads" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint5" type="462c0819:PsiDirectoryNode" />
+              <item name="dwd_dws" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint5" type="462c0819:PsiDirectoryNode" />
+              <item name="dwd_dws" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint5" type="462c0819:PsiDirectoryNode" />
+              <item name="dws_ads" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint5" type="462c0819:PsiDirectoryNode" />
+              <item name="dws_ads" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint5" type="462c0819:PsiDirectoryNode" />
+              <item name="dws_ads" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+              <item name="target_const" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="data-engine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resource" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint5" type="462c0819:PsiDirectoryNode" />
+              <item name="dwd_dws" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint5" type="462c0819:PsiDirectoryNode" />
+              <item name="dwd_dws" type="462c0819:PsiDirectoryNode" />
+              <item name="production_machine_maintenance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint5" type="462c0819:PsiDirectoryNode" />
+              <item name="dwd_dws" type="462c0819:PsiDirectoryNode" />
+              <item name="production_output" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="data-engine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -533,16 +625,7 @@
               <item name="metafile" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="metafile" type="462c0819:PsiDirectoryNode" />
-              <item name="beans" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="data-engine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -551,34 +634,181 @@
               <item name="sqls" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="data-engine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resource" type="462c0819:PsiDirectoryNode" />
               <item name="metafile" type="462c0819:PsiDirectoryNode" />
               <item name="sqls" type="462c0819:PsiDirectoryNode" />
-              <item name="sql_temp" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="metafile" type="462c0819:PsiDirectoryNode" />
+              <item name="sqls" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint5" type="462c0819:PsiDirectoryNode" />
+              <item name="sql_ads" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="data-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="foxconn" type="462c0819:PsiDirectoryNode" />
+              <item name="dpm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.treasuremountain.datalake:dpsparksdk:2.0.0" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.treasuremountain.datalake:dpsparksdk:2.0.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="dpsparksdk-2.0.0.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.treasuremountain.datalake:dpsparksdk:2.0.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="dpsparksdk-2.0.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.treasuremountain.datalake:dpsparksdk:2.0.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="dpsparksdk-2.0.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.treasuremountain.datalake:dpsparksdk:2.0.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="dpsparksdk-2.0.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tm" type="462c0819:PsiDirectoryNode" />
+              <item name="dl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.treasuremountain.datalake:dpsparksdk:2.0.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="dpsparksdk-2.0.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tm" type="462c0819:PsiDirectoryNode" />
+              <item name="dl" type="462c0819:PsiDirectoryNode" />
+              <item name="javasdk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.treasuremountain.datalake:dpsparksdk:2.0.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="dpsparksdk-2.0.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tm" type="462c0819:PsiDirectoryNode" />
+              <item name="dl" type="462c0819:PsiDirectoryNode" />
+              <item name="javasdk" type="462c0819:PsiDirectoryNode" />
+              <item name="dpspark" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.treasuremountain.datalake:dpsparksdk:2.0.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="dpsparksdk-2.0.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tm" type="462c0819:PsiDirectoryNode" />
+              <item name="dl" type="462c0819:PsiDirectoryNode" />
+              <item name="javasdk" type="462c0819:PsiDirectoryNode" />
+              <item name="dpspark" type="462c0819:PsiDirectoryNode" />
+              <item name="hbase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.treasuremountain.datalake:dpsparksdk:2.0.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="dpsparksdk-2.0.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tm" type="462c0819:PsiDirectoryNode" />
+              <item name="dl" type="462c0819:PsiDirectoryNode" />
+              <item name="javasdk" type="462c0819:PsiDirectoryNode" />
+              <item name="dpspark" type="462c0819:PsiDirectoryNode" />
+              <item name="mysql" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="data-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.treasuremountain.datalake:dpsparksdk:2.0.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="dpsparksdk-2.0.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tm" type="462c0819:PsiDirectoryNode" />
+              <item name="dl" type="462c0819:PsiDirectoryNode" />
+              <item name="javasdk" type="462c0819:PsiDirectoryNode" />
+              <item name="dpspark" type="462c0819:PsiDirectoryNode" />
+              <item name="sqlserver" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
-    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="dataengine" />
+    <property name="SearchEverywhereHistoryKey" value="com.foxconn.dpm.sprint3.dws_ads.L10ScheduleAdherence&#9;PSI&#9;JAVA://com.foxconn.dpm.sprint3.dws_ads.L10ScheduleAdherence&#10;cn.hutool.db.handler.RsHandler&#9;PSI&#9;JAVA://cn.hutool.db.handler.RsHandler&#10;DayLineProductionWorkTime&#9;FILE&#9;file://C:/Users/ASUS/Desktop/F2.0_DPM/spark_project_jar/dpm-wh/data-engine/src/main/java/com/foxconn/dpm/sprint1_2/dwd_dws/DayLineProductionWorkTime.java&#10;Dpspark&#9;PSI&#9;JAVA://com.tm.dl.javasdk.dpspark.DPSparkApp&#10;com.tm.dl.javasdk.dpspark.DPSparkApp&#9;PSI&#9;JAVA://com.tm.dl.javasdk.dpspark.DPSparkApp&#10;com.tm.dl.javasdk.dpspark.common.ProdPermissionManager&#9;PSI&#9;JAVA://com.tm.dl.javasdk.dpspark.common.ProdPermissionManager&#10;PersonalWorkHourCalculateSprintFour&#9;PSI&#9;JAVA://com.foxconn.dpm.sprint4.dwd_dws.PersonalWorkHourCalculateSprintFour" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="GenericSQL" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect" value="HSQLDB&#10;PostgreSQL&#10;DB2" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SFC/F20_DPM_ETL" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -587,20 +817,30 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.foxconn.dpm" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.foxconn.dpm.dwd_dws" />
-      <recent name="com.foxconn.dpm.dwd_dws.udf" />
-      <recent name="com.foxconn.dpm.util.other" />
-      <recent name="org.apache.hadoop.hbase.util" />
-      <recent name="com.foxconn.dpm.util.beanstruct" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\YZH_WORK\workspace_important\data-engine\src\main\resource\metafile\sqls\sql_temp" />
-      <recent name="D:\YZH_WORK\workspace_important\data-engine\src\main\java\com\foxconn\dpm\dwd_dws" />
-      <recent name="D:\YZH_WORK\workspace_important\data-engine\src\main\java\com\foxconn\dpm" />
-      <recent name="D:\YZH_WORK\workspace_important\data-engine\src\main\resource\metafile\sqls\sql_ads" />
-      <recent name="D:\YZH_WORK\workspace_important\data-engine\src\main\java\com\foxconn\dpm\dws_ads" />
+      <recent name="C:\Users\ASUS\Desktop\F2.0_DPM\spark_project_jar\dpm-wh\data-engine\src\main\java\com\foxconn\dpm\sprint5\ods_dwd" />
+      <recent name="C:\Users\ASUS\Desktop\F2.0_DPM\spark_project_jar\dpm-wh\data-engine\src\main\resource\metafile\sqls\sprint4\sql_ads" />
+      <recent name="C:\Users\ASUS\Desktop\F2.0_DPM\spark_project_jar\dpm-wh\data-engine\src\main\resource\metafile\sqls\sprint1-2\sql_ads" />
+      <recent name="C:\Users\ASUS\Desktop\F2.0_DPM\spark_project_jar\dpm-wh\data-engine\src\main\resource\metafile\sqls\sprint5\sql_ads" />
+      <recent name="C:\Users\ASUS\Desktop\F2.0_DPM\spark_project_jar\dpm-wh\data-engine\src\main\resource\metafile\sqls\sprint5\sql_dws" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.foxconn.dpm.sprint5.ods_dwd" />
+      <recent name="com.foxconn.dpm.sprint5.ods_dwd.bean" />
+      <recent name="com.foxconn.dpm.sprint5.dws_ads.udf" />
+      <recent name="com.foxconn.dpm.sprint5.dwd_dws" />
+      <recent name="com.foxconn.dpm.sprint5.dws_ads" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\Desktop\F2.0_DPM\spark_project_jar\dpm-wh\data-engine\src\main\resource\metafile\sqls\sprint5" />
+      <recent name="C:\Users\ASUS\Desktop\F2.0_DPM\spark_project_jar\dpm-wh\data-engine\src\main\resource\metafile\sqls" />
+    </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -614,28 +854,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.com.tm.dl.javasdk.dpspark.DPSparkApp">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-    </configuration>
-    <configuration name="BatchGetter" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.foxconn.dpm.util.batchData.BatchGetter" />
+  <component name="RunManager" selected="JUnit.AppTest.test">
+    <configuration name="DPSparkApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tm.dl.javasdk.dpspark.DPSparkApp" />
       <module name="data-engine" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PROGRAM_PARAMETERS" value="{\&quot;dprunclass\&quot;:\&quot;com.foxconn.dpm.sprint5.ods_dwd.ProductionSteaming\&quot;,\&quot;dpappName\&quot;:\&quot;streaming-dwd\&quot;,\&quot;dpuserid\&quot;:\&quot;8F70E561-ED63-4B88-A343-UIDE89FF9156\&quot;,\&quot;dpmaster\&quot;:\&quot;local[*]\&quot;,\&quot;pmClass\&quot;:\&quot;com.tm.dl.javasdk.dpspark.common.ProdPermissionManager\&quot;,\&quot;dpType\&quot;:\&quot;streaming\&quot;,\&quot;dpStreaming\&quot;:{\&quot;topics\&quot;:\&quot;chen_topic\&quot;,\&quot;groupId\&quot;:\&quot;chen\&quot;,\&quot;batchDuration\&quot;:5}}" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.foxconn.dpm.util.batchData.*" />
+          <option name="PATTERN" value="com.foxconn.dpm.sprint5.dws_ads.udf.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.foxconn.dpm.Test" />
+    <configuration name="DPSparkApp1" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.tm.dl.javasdk.dpspark.DPSparkApp" />
       <module name="data-engine" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PROGRAM_PARAMETERS" value="{\&quot;dprunclass\&quot;:\&quot;com.foxconn.dpm.sprint5.ods_dwd.ProductionSteamingdwdTodws\&quot;,\&quot;dpappName\&quot;:\&quot;streaming-dws\&quot;,\&quot;dpuserid\&quot;:\&quot;8F70E561-ED63-4B88-A343-UIDE89FF9156\&quot;,\&quot;dpmaster\&quot;:\&quot;local[*]\&quot;,\&quot;pmClass\&quot;:\&quot;com.tm.dl.javasdk.dpspark.common.ProdPermissionManager\&quot;,\&quot;dpType\&quot;:\&quot;streaming\&quot;,\&quot;dpStreaming\&quot;:{\&quot;topics\&quot;:\&quot;cj_topic\&quot;,\&quot;groupId\&quot;:\&quot;cj\&quot;,\&quot;batchDuration\&quot;:5}}" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.foxconn.dpm.*" />
+          <option name="PATTERN" value="com.foxconn.dpm.util.autobuild.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="DPSparkApp2" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.tm.dl.javasdk.dpspark.DPSparkApp" />
+      <module name="data-engine" />
+      <option name="PROGRAM_PARAMETERS" value="{\&quot;dprunclass\&quot;:\&quot;com.foxconn.dpm.sprint5.ods_dwd.ProductionSteamingDwsToAds\&quot;,\&quot;dpappName\&quot;:\&quot;streaming-ads\&quot;,\&quot;dpuserid\&quot;:\&quot;8F70E561-ED63-4B88-A343-UIDE89FF9156\&quot;,\&quot;dpmaster\&quot;:\&quot;local[*]\&quot;,\&quot;pmClass\&quot;:\&quot;com.tm.dl.javasdk.dpspark.common.ProdPermissionManager\&quot;,\&quot;dpType\&quot;:\&quot;streaming\&quot;,\&quot;dpStreaming\&quot;:{\&quot;topics\&quot;:\&quot;text_topic\&quot;,\&quot;groupId\&quot;:\&quot;chen\&quot;,\&quot;batchDuration\&quot;:5}}" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.foxconn.dpm.sprint5.dws_ads.udf.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -643,11 +894,51 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="com.tm.dl.javasdk.dpspark.DPSparkApp" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.tm.dl.javasdk.dpspark.DPSparkApp" />
+    <configuration name="AppTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="data-engine" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;{ \&quot;dprunclass\&quot;: \&quot;com.foxconn.dpm.temporary.LevelDayOutPut\&quot;, \&quot;dpuserid\&quot;: \&quot;0ad735dc-f1d6-44c9-bdb1-5ce86b2e760f\&quot;, \&quot;dpmaster\&quot;: \&quot;local[*]\&quot;, \&quot;dpappName\&quot;: \&quot;datamanager2\&quot;, \&quot;pmClass\&quot;: \&quot;com.tm.dl.javasdk.dpspark.common.ProdPermissionManager\&quot;, \&quot;dpType\&quot;:\&quot;scheduling\&quot;}&quot;" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.foxconn.dpm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.foxconn.dpm" />
+      <option name="MAIN_CLASS_NAME" value="com.foxconn.dpm.AppTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="AppTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="data-engine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.foxconn.dpm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.foxconn.dpm" />
+      <option name="MAIN_CLASS_NAME" value="com.foxconn.dpm.AppTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -688,586 +979,1101 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.com.tm.dl.javasdk.dpspark.DPSparkApp" />
-      <item itemvalue="Application.BatchGetter" />
-      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.DPSparkApp" />
+      <item itemvalue="Application.DPSparkApp1" />
+      <item itemvalue="Application.DPSparkApp2" />
+      <item itemvalue="JUnit.AppTest.test" />
+      <item itemvalue="JUnit.AppTest.test1" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AppTest.test" />
+        <item itemvalue="Application.DPSparkApp" />
+        <item itemvalue="Application.DPSparkApp2" />
+        <item itemvalue="Application.DPSparkApp1" />
+        <item itemvalue="JUnit.AppTest.test1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="055187d6-6255-45ac-9b08-0118dfba01a1" name="Default" comment="" />
-      <created>1576895104655</created>
+      <changelist id="2e2104ce-a229-411b-b0b0-f25fc7e5aa48" name="Default" comment="" />
+      <created>1588562487341</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1576895104655</updated>
-      <workItem from="1576895111192" duration="537000" />
-      <workItem from="1576895705008" duration="1967000" />
-      <workItem from="1576902482469" duration="848000" />
-      <workItem from="1576904934434" duration="1176000" />
-      <workItem from="1576912154202" duration="227000" />
-      <workItem from="1576912484007" duration="50627000" />
-      <workItem from="1577110479289" duration="130389000" />
-      <workItem from="1577455496924" duration="4057000" />
-      <workItem from="1577459573402" duration="22525000" />
-      <workItem from="1577510511125" duration="71368000" />
-      <workItem from="1577751567429" duration="194154000" />
-      <workItem from="1578269979055" duration="56841000" />
-      <workItem from="1578886279026" duration="1535000" />
-      <workItem from="1578890845976" duration="6190000" />
-      <workItem from="1578987776010" duration="1852000" />
-      <workItem from="1579051872506" duration="4416000" />
-      <workItem from="1579134295299" duration="3786000" />
-      <workItem from="1579220876635" duration="1119000" />
+      <updated>1588562487341</updated>
+      <workItem from="1588562491372" duration="17469000" />
+      <workItem from="1588637614109" duration="61792000" />
+      <workItem from="1588811984909" duration="8482000" />
+      <workItem from="1588821238288" duration="47275000" />
+      <workItem from="1589155651734" duration="219955000" />
+      <workItem from="1589933639806" duration="64235000" />
+      <workItem from="1590451252941" duration="20583000" />
+      <workItem from="1590540247363" duration="21391000" />
+      <workItem from="1590572739999" duration="18000" />
+      <workItem from="1590627981470" duration="10537000" />
+      <workItem from="1590713286456" duration="14784000" />
+      <workItem from="1590972566406" duration="34221000" />
+      <workItem from="1591144970602" duration="54236000" />
+      <workItem from="1591577366260" duration="41159000" />
+      <workItem from="1591763031157" duration="27191000" />
+      <workItem from="1591928553255" duration="14712000" />
+      <workItem from="1592181110182" duration="9868000" />
+      <workItem from="1592199457525" duration="9963000" />
+      <workItem from="1592268891131" duration="1492000" />
+      <workItem from="1592287631970" duration="13318000" />
+      <workItem from="1592354572341" duration="40840000" />
+      <workItem from="1592474438081" duration="27980000" />
+      <workItem from="1592616168598" duration="18609000" />
+      <workItem from="1592787166648" duration="81509000" />
+      <workItem from="1593303709340" duration="22549000" />
+      <workItem from="1593391950196" duration="19934000" />
+      <workItem from="1593418074655" duration="6037000" />
+      <workItem from="1593476803632" duration="14300000" />
+      <workItem from="1593504347037" duration="14966000" />
+      <workItem from="1593563218578" duration="10513000" />
+      <workItem from="1593574525002" duration="22512000" />
+      <workItem from="1593650059307" duration="25565000" />
+      <workItem from="1593736385864" duration="9045000" />
+      <workItem from="1593998155537" duration="49081000" />
+      <workItem from="1594170561716" duration="41360000" />
+      <workItem from="1594343127511" duration="6569000" />
+      <workItem from="1594350268592" duration="17179000" />
+      <workItem from="1594517261236" duration="599000" />
+      <workItem from="1594686865335" duration="33314000" />
+      <workItem from="1594774565481" duration="19965000" />
+      <workItem from="1594861252500" duration="38728000" />
+      <workItem from="1595041743482" duration="681000" />
+      <workItem from="1595205974524" duration="24112000" />
+      <workItem from="1595294979851" duration="38324000" />
+      <workItem from="1595465497581" duration="9758000" />
+      <workItem from="1595489522543" duration="2660000" />
+      <workItem from="1595553065093" duration="3552000" />
+      <workItem from="1596719711749" duration="35000" />
+      <workItem from="1598352001450" duration="952000" />
+      <workItem from="1606136198510" duration="1861000" />
     </task>
+    <task id="LOCAL-00037" summary="2020-06-01  L5 DT1 出勤  离职">
+      <created>1590993658855</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1590993658856</updated>
+    </task>
+    <task id="LOCAL-00038" summary="2020-06-01  L5 DT1 出勤  离职  merge">
+      <created>1590993689015</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1590993689015</updated>
+    </task>
+    <task id="LOCAL-00039" summary="2020-06-03">
+      <created>1591145639991</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1591145639991</updated>
+    </task>
+    <task id="LOCAL-00040" summary="2020-06-03  13.36">
+      <created>1591162578214</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1591162578214</updated>
+    </task>
+    <task id="LOCAL-00041" summary="2020-06-04">
+      <created>1591263672191</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1591263672191</updated>
+    </task>
+    <task id="LOCAL-00042" summary="2020-06-05  L6 fpy">
+      <created>1591337980136</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1591337980136</updated>
+    </task>
+    <task id="LOCAL-00043" summary="2020-06-08">
+      <created>1591610381007</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1591610381007</updated>
+    </task>
+    <task id="LOCAL-00044" summary="2020-06-09 CQ 1-2 修改完成基本逻辑">
+      <created>1591670500784</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1591670500784</updated>
+    </task>
+    <task id="LOCAL-00045" summary="2020-06-10">
+      <created>1591783189150</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1591783189150</updated>
+    </task>
+    <task id="LOCAL-00046" summary="2020-06-12">
+      <created>1591949227319</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1591949227319</updated>
+    </task>
+    <task id="LOCAL-00047" summary="2020-06-15  修改L6oee bug 修复周月季">
+      <created>1592199544735</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1592199544735</updated>
+    </task>
+    <task id="LOCAL-00048" summary="2020-06-17  修改L6oee bug 修复hc的bug一天三版数据  周月季">
+      <created>1592378850665</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1592378850665</updated>
+    </task>
+    <task id="LOCAL-00049" summary="2020-06-19  离职修改完毕，oee修改过，sprint5 L10 suph,fpy开始">
+      <created>1592546664840</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1592546664840</updated>
+    </task>
+    <task id="LOCAL-00050" summary="2020-06-19  sprint5 L10 uph,fpy开始">
+      <created>1592550884328</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1592550884330</updated>
+    </task>
+    <task id="LOCAL-00051" summary="2020-06-22  sprint5 L10 uph,fpy开始">
+      <created>1592799788019</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1592799788019</updated>
+    </task>
+    <task id="LOCAL-00052" summary="2020-06-23   l10uph">
+      <created>1592883735658</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1592883735658</updated>
+    </task>
+    <task id="LOCAL-00053" summary="2020-06-23   l10uph">
+      <created>1592891420708</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1592891420709</updated>
+    </task>
+    <task id="LOCAL-00054" summary="2020-06-24   l10uphline 完成 l10fpy doing">
+      <created>1592988834261</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1592988834261</updated>
+    </task>
+    <task id="LOCAL-00055" summary="2020-06-28">
+      <created>1593339634935</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1593339634936</updated>
+    </task>
+    <task id="LOCAL-00056" summary="2020-06-28">
+      <created>1593340677566</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1593340677566</updated>
+    </task>
+    <task id="LOCAL-00057" summary="2020-06-29   l6uph">
+      <created>1593395449915</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1593395449916</updated>
+    </task>
+    <task id="LOCAL-00058" summary="2020-06-30   l6uphLine  L6FpyLine 修改完成">
+      <created>1593485758255</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1593485758256</updated>
+    </task>
+    <task id="LOCAL-00059" summary="2020-07-01   修改目标值">
+      <created>1593565001518</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1593565001519</updated>
+    </task>
+    <task id="LOCAL-00060" summary="2020-07-01   目标值修改，todoing oee fpy line">
+      <created>1593581282737</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1593581282737</updated>
+    </task>
+    <task id="LOCAL-00061" summary="2020-07-01">
+      <created>1593582277884</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1593582277884</updated>
+    </task>
+    <task id="LOCAL-00062" summary="2020-07-01 cq  wu  目标值修改完成">
+      <created>1593583926504</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1593583926504</updated>
+    </task>
+    <task id="LOCAL-00063" summary="2020-07-01 cq  wu  目标值修改完成">
+      <created>1593592618441</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1593592618441</updated>
+    </task>
+    <task id="LOCAL-00064" summary="2020-07-06">
+      <created>1593998325585</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1593998325586</updated>
+    </task>
+    <task id="LOCAL-00065" summary="2020-07-06 l6 fpy">
+      <created>1594017231759</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1594017231759</updated>
+    </task>
+    <task id="LOCAL-00066" summary="2020-07-06 l6 fpy">
+      <created>1594017303412</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1594017303412</updated>
+    </task>
+    <task id="LOCAL-00067" summary="2020-07-06 l6 fpy">
+      <created>1594022481711</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1594022481711</updated>
+    </task>
+    <task id="LOCAL-00068" summary="2020-07-06 l6 fpy">
+      <created>1594031347917</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1594031347917</updated>
+    </task>
+    <task id="LOCAL-00069" summary="2020-07-07">
+      <created>1594107384547</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1594107384548</updated>
+    </task>
+    <task id="LOCAL-00070" summary="2020-07-07">
+      <created>1594107408569</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1594107408569</updated>
+    </task>
+    <task id="LOCAL-00071" summary="2020-07-07  l10uph">
+      <created>1594112369756</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1594112369756</updated>
+    </task>
+    <task id="LOCAL-00072" summary="2020-07-14">
+      <created>1594688535978</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1594688535978</updated>
+    </task>
+    <task id="LOCAL-00073" summary="2020-07-14 spark streaming 累加案例 sprint5 ods_dwd">
+      <created>1594713893851</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1594713893851</updated>
+    </task>
+    <task id="LOCAL-00074" summary="2020-07-14 spark streaming 累加案例 sprint5 ods_dwd">
+      <created>1594717156068</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1594717156068</updated>
+    </task>
+    <task id="LOCAL-00075" summary="2020-07-15 spark streaming 累加案例 sprint5 ods_dwd">
+      <created>1594775617205</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1594775617206</updated>
+    </task>
+    <task id="LOCAL-00076" summary="2020-07-15">
+      <created>1594806208203</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1594806208203</updated>
+    </task>
+    <task id="LOCAL-00077" summary="2020-07-15 rowkey插件代码">
+      <created>1594869890109</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1594869890110</updated>
+    </task>
+    <task id="LOCAL-00078" summary="2020-07-15 cj">
+      <created>1594870030895</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1594870030895</updated>
+    </task>
+    <task id="LOCAL-00079" summary="2020-07-20 l5 fpy line">
+      <created>1595208446298</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1595208446298</updated>
+    </task>
+    <task id="LOCAL-00080" summary="2020-07-20 l5 fpy line">
+      <created>1595215573235</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1595215573235</updated>
+    </task>
+    <task id="LOCAL-00081" summary="2020-07-20 l6 fpy">
+      <created>1595230680522</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1595230680522</updated>
+    </task>
+    <task id="LOCAL-00082" summary="2020-07-20 l10 uph line">
+      <created>1595295438077</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1595295438078</updated>
+    </task>
+    <task id="LOCAL-00083" summary="2020-07-22 l6 fpy oee line">
+      <created>1595405582266</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1595405582266</updated>
+    </task>
+    <task id="LOCAL-00084" summary="2020-07-22 l6 fpy oee line">
+      <created>1595407320120</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1595407320120</updated>
+    </task>
+    <task id="LOCAL-00085" summary="2020-07-22">
+      <created>1595410396445</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1595410396445</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="553614000" />
+  <component name="TestHistory">
+    <history-entry file="AppTest_test - 2020.07.07 at 12h 16m 34s.xml">
+      <configuration name="AppTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_test - 2020.07.07 at 12h 19m 13s.xml">
+      <configuration name="AppTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_test - 2020.07.07 at 12h 19m 18s.xml">
+      <configuration name="AppTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_test - 2020.07.07 at 14h 06m 16s.xml">
+      <configuration name="AppTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_test - 2020.07.09 at 10h 23m 59s.xml">
+      <configuration name="AppTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_test - 2020.07.09 at 10h 49m 13s.xml">
+      <configuration name="AppTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_test - 2020.07.09 at 11h 31m 34s.xml">
+      <configuration name="AppTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_test - 2020.07.09 at 15h 12m 06s.xml">
+      <configuration name="AppTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_test - 2020.07.09 at 15h 14m 20s.xml">
+      <configuration name="AppTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_test - 2020.07.16 at 16h 16m 57s.xml">
+      <configuration name="AppTest.test" configurationId="JUnit" />
+    </history-entry>
   </component>
-  <component name="TodoView" selected-index="2">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1295770000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="330" y="28" width="1480" height="856" extended-state="1" />
+    <frame x="340" y="52" width="1484" height="926" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="bottom" id="TODO" order="9" weight="0.3290735" />
-      <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3290735" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5090634" side_tool="true" weight="0.3290735" />
-      <window_info anchor="right" id="Maven Projects" order="8" sideWeight="0.49190283" weight="0.069296375" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="RestServices" order="9" weight="0.32995737" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026652" side_tool="true" weight="0.08286674" />
+      <window_info anchor="right" id="Maven Projects" order="11" weight="0.3075693" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.24920128" />
-      <window_info anchor="bottom" id="Spring" order="12" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3290735" />
-      <window_info id="Capture Tool" order="0" />
-      <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.26549295" />
-      <window_info anchor="right" id="Bean Validation" order="10" sideWeight="0.49190283" weight="0.32930514" />
-      <window_info anchor="right" id="Database" order="9" sideWeight="0.49190283" weight="0.33761328" />
-      <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="11" sideWeight="0.4757085" weight="0.13066465" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="bottom" id="Favorites" order="13" side_tool="true" weight="0.3290735" />
-      <window_info anchor="bottom" id="Debug" order="6" sideWeight="0.49093655" weight="0.26517573" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="4" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32942432" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.24946696" />
+      <window_info id="UI Designer" order="5" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.40761477" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.20604703" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733475" weight="0.18924972" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49733475" weight="0.35834268" />
+      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32922733" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27879214" />
+      <window_info anchor="right" id="Bean Validation" order="10" weight="0.32995737" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32922733" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="0" side_tool="true" weight="0.32995737" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Thumbnails" order="7" visible="true" weight="0.37254903" />
-      <window_info anchor="right" id="Commander" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info id="Learn" order="7" />
-      <window_info anchor="bottom" id="Messages" order="1" weight="0.3290735" />
-      <window_info anchor="right" x="465" y="57" width="436" height="626" id="SQL Formatter" internal_type="SLIDING" order="7" show_stripe_button="false" type="SLIDING" weight="0.32930514" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="JProfiler" order="14" />
-      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="4" weight="0.3290735" />
-      <window_info anchor="right" id="Coverage" order="0" sideWeight="0.5080972" side_tool="true" weight="0.32930514" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.4978678" weight="0.24972005" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4968017" weight="0.30011198" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Thumbnails" order="7" visible="true" weight="0.37254903" />
-      <window_info id="Designer" order="1" />
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="right" x="465" y="57" width="436" height="626" id="SQL Formatter" internal_type="SLIDING" order="7" show_stripe_button="false" type="SLIDING" weight="0.32930514" />
-      <window_info anchor="bottom" id="Spring" order="14" />
+      <window_info id="Designer" order="4" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="bottom" id="Spring" order="9" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.24920128" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="11" sideWeight="0.4757085" weight="0.13066465" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Favorites" order="15" side_tool="true" weight="0.3290735" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.3290735" />
-      <window_info id="Capture Tool" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="Commander" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5090634" side_tool="true" weight="0.3290735" />
-      <window_info anchor="bottom" id="Messages" order="1" weight="0.3290735" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3290735" />
-      <window_info anchor="bottom" id="JProfiler" order="16" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
-      <window_info anchor="right" id="Maven Projects" order="8" sideWeight="0.49190283" visible="true" weight="0.069296375" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.2585288" />
-      <window_info id="Learn" order="6" />
-      <window_info anchor="right" id="Database" order="9" sideWeight="0.49190283" weight="0.33761328" />
-      <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="TODO" order="11" weight="0.3290735" />
-      <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="right" id="Coverage" order="0" sideWeight="0.5080972" side_tool="true" weight="0.32930514" />
-      <window_info anchor="bottom" id="Find" order="4" weight="0.3290735" />
-      <window_info anchor="right" id="Bean Validation" order="10" sideWeight="0.49190283" weight="0.32930514" />
-      <window_info anchor="bottom" id="Debug" order="6" sideWeight="0.49093655" weight="0.26517573" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733475" weight="0.18924972" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.24946696" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32922733" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32922733" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026652" side_tool="true" weight="0.08286674" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.4978678" weight="0.24972005" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="0" side_tool="true" weight="0.32995737" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.20604703" />
+      <window_info anchor="bottom" id="JProfiler" order="14" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49733475" weight="0.35834268" />
+      <window_info anchor="right" id="Maven Projects" order="11" weight="0.3075693" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4968017" weight="0.30011198" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21162046" />
+      <window_info id="Learn" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32942432" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="RestServices" order="9" weight="0.32995737" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.40761477" />
+      <window_info anchor="right" id="Bean Validation" order="10" weight="0.32995737" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2020-06-23   l10uph" />
+    <MESSAGE value="2020-06-24   l10uphline 完成 l10fpy doing" />
+    <MESSAGE value="2020-06-28" />
+    <MESSAGE value="2020-06-29   l6uph" />
+    <MESSAGE value="2020-06-30   l6uphLine  L6FpyLine 修改完成" />
+    <MESSAGE value="2020-07-01   修改目标值" />
+    <MESSAGE value="2020-07-01   目标值修改，todoing oee fpy line" />
+    <MESSAGE value="2020-07-01   merger" />
+    <MESSAGE value="2020-07-01" />
+    <MESSAGE value="2020-07-01 cq  wu  目标值修改完成" />
+    <MESSAGE value="2020-07-06" />
+    <MESSAGE value="2020-07-06 l6 fpy" />
+    <MESSAGE value="2020-07-07" />
+    <MESSAGE value="2020-07-07  l10uph" />
+    <MESSAGE value="2020-07-14" />
+    <MESSAGE value="2020-07-14 spark streaming 累加案例 sprint5 ods_dwd" />
+    <MESSAGE value="2020-07-15 spark streaming 累加案例 sprint5 ods_dwd" />
+    <MESSAGE value="2020-07-15" />
+    <MESSAGE value="2020-07-15 rowkey插件代码" />
+    <MESSAGE value="2020-07-15 cj" />
+    <MESSAGE value="2020-07-20 l5 fpy line" />
+    <MESSAGE value="2020-07-20 l6 fpy" />
+    <MESSAGE value="2020-07-20 l10 uph line" />
+    <MESSAGE value="2020-07-22 l6 fpy oee line" />
+    <MESSAGE value="2020-07-22" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-07-22" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/batchData/BatchGetter.java</url>
-          <line>964</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/beanstruct/BeanGetter.java</url>
+          <line>609</line>
           <properties />
-          <option name="timeStamp" value="576" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/beanstruct/BeanGetter.java</url>
-          <line>275</line>
+          <line>615</line>
           <properties />
-          <option name="timeStamp" value="586" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/beanstruct/BeanGetter.java</url>
-          <line>279</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint3/dws_ads/L6FpyLine.java</url>
+          <line>508</line>
           <properties />
-          <option name="timeStamp" value="587" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint3/dws_ads/L6Oee2Line.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint3/dws_ads/L6FpyLine.java</url>
+          <line>302</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint3/dws_ads/L6FpyLine.java</url>
+          <line>250</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dws_ads/L6oeeDwsToAds.java</url>
+          <line>280</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dws_ads/L6oeeDwsToAds.java</url>
+          <line>387</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dws_ads/L6oeeDwsToAds.java</url>
+          <line>437</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/com/tm/dl/javasdk/dpspark/streaming/DPStreaming.class</url>
+          <line>88</line>
+          <properties />
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/com/tm/dl/javasdk/dpspark/streaming/DPStreaming.class</url>
+          <line>96</line>
+          <properties />
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dws_ads/L6oeeDwsToAds.java</url>
+          <line>171</line>
+          <properties />
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dws_ads/L6oeeDwsToAds.java</url>
+          <line>383</line>
+          <properties class="com.foxconn.dpm.sprint1_2.dws_ads.L6oeeDwsToAds">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint3/dws_ads/L6FpyLine.java</url>
+          <line>249</line>
+          <properties class="com.foxconn.dpm.sprint3.dws_ads.L6FpyLine">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dwd_dws/L6Oee1DwdToDws.java</url>
+          <line>393</line>
+          <properties class="com.foxconn.dpm.sprint1_2.dwd_dws.L6Oee1DwdToDws" method="lineCode">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint4/dws_ads/bean/HrAttendanceOutput.java</url>
+          <line>22</line>
+          <properties field="factory_code" class="com.foxconn.dpm.sprint4.dws_ads.bean.HrAttendanceOutput" />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://F:/spark阶段 old李/Spark01/软件/spark-2.2.2/streaming/src/main/scala/org/apache/spark/streaming/scheduler/JobScheduler.scala</url>
+          <line>266</line>
+          <properties />
+          <option name="timeStamp" value="98" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="591" />
+      <option name="time" value="104" />
     </breakpoint-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand>
-      <path>
-        <item name="dataengine" type="b2602c69:ProjectViewProjectNode" />
-        <item name="data-engine" type="462c0819:PsiDirectoryNode" />
-      </path>
-    </expand>
-    <select />
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="dpKafkaInfo.topics" />
+      </configuration>
+      <configuration name="Application">
+        <watch expression="dStream.dstream" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/DataCleanHelp.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/org/apache/spark/sql/UDFRegistration.class">
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint1-2/sql_ads/CalculateSiteWeekAttendanceAnalysi.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint1-2/sql_ads/Attendance_week.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint3/sql_ads/L6SALevel_month.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="32" column="86" selection-start-line="32" selection-start-column="85" selection-end-line="32" selection-end-column="86" />
+        <state relative-caret-position="230">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/batchData/RowDataUtil.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint1-2/sql_ads/L6Oee2LineYear.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="253">
+          <caret line="11" column="103" selection-start-line="11" selection-start-column="103" selection-end-line="11" selection-end-column="103" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/sql/SqlGetter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint1-2/sql_ads/L6Oee2LineWeek.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="253">
+          <caret line="11" column="103" selection-start-line="11" selection-start-column="103" selection-end-line="11" selection-end-column="103" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/beanstruct/ScalaBeanGetter.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint1-2/sql_ads/L6Oee2LineQuarter.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="22" />
+        <state relative-caret-position="253">
+          <caret line="11" column="103" selection-start-line="11" selection-start-column="103" selection-end-line="11" selection-end-column="103" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://E:/360data/jdk1.8.171/src.zip!/java/util/Calendar.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/ods_dwd/PersonnelEmpWorkhours.java" />
-    <entry file="jar://E:/360data/jdk1.8.171/src.zip!/java/text/DecimalFormat.java" />
-    <entry file="jar://E:/360data/jdk1.8.171/src.zip!/java/text/DecimalFormatSymbols.java" />
-    <entry file="jar://E:/360data/jdk1.8.171/src.zip!/java/text/NumberFormat.java" />
-    <entry file="jar://E:/360data/jdk1.8.171/src.zip!/java/text/Format.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/Test.java" />
-    <entry file="file://$PROJECT_DIR$/data-engine.iml">
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint1-2/sql_ads/L6Oee2LineMonth.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        <state relative-caret-position="368">
+          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/com/tm/dl/javasdk/dpspark/hbase/DPHbase.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint3/dws_ads/L5QualityFpyThree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+        <state relative-caret-position="-1242" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dws_ads/bean/DWSProductionMachineMaintenanceHH.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1748">
+          <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/hbaseread/HGetter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dws_ads/bean/ADSProductionMachineFailureTimeDay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="48" column="103" selection-start-line="48" selection-start-column="103" selection-end-line="48" selection-end-column="103" />
+        <state relative-caret-position="327">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/log4j.properties">
+    <entry file="jar://$MAVEN_REPOSITORY$/cn/hutool/hutool-all/5.0.6/hutool-all-5.0.6-sources.jar!/cn/hutool/db/sql/SqlExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="253">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/udf/FormatFloatNumber.java">
+    <entry file="jar://C:/QMDownload/Java/jdk1.8.0_144/src.zip!/java/lang/reflect/Field.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+        <state relative-caret-position="24541">
+          <caret line="1117" column="36" selection-start-line="1117" selection-start-column="36" selection-end-line="1117" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_dws/dpm_dws_dsn_day_output_calculate.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/common/annotation/MySqlColumn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        <state relative-caret-position="759">
+          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/TestRandom.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/org/apache/spark/api/java/JavaPairRDD.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/common/bean/MySqlColumnBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        <state relative-caret-position="230">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/udf/CalculateYearWeekEx.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dws_ads/HrHeadcountKpi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="3795">
+          <caret line="193" column="8" selection-start-line="193" selection-start-column="8" selection-end-line="194" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/org/apache/spark/api/java/JavaRDD.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dws_ads/HrTurnoverKpi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="2116">
+          <caret line="124" selection-start-line="124" selection-end-line="124" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/temporary/beans/ManualStandardValue.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dws_ads/HrAttendanceKpi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        <state relative-caret-position="460">
+          <caret line="99" column="31" selection-start-line="99" selection-start-column="31" selection-end-line="99" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint3/dws_ads/L6Oee2Line.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="56" column="79" selection-start-line="56" selection-start-column="79" selection-end-line="56" selection-end-column="79" />
+        <state relative-caret-position="299">
+          <caret line="172" column="286" selection-start-line="172" selection-start-column="286" selection-end-line="172" selection-end-column="286" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/beans/ods_beans.yml">
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint1-2/sql_ads/L6FpyLine_Day.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-501">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        <state relative-caret-position="115">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/org/apache/spark/api/java/JavaRDDLike.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dws_ads/L6oeeDwsToAds.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        <state relative-caret-position="392">
+          <caret line="614" column="53" lean-forward="true" selection-start-line="614" selection-start-column="53" selection-end-line="614" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/beanstruct/BeanGetter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint5/sql_ads/l6_uphLine_day_ads.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="253">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/target_const/LoadKpiTarget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="190" column="11" lean-forward="true" selection-start-line="190" selection-start-column="11" selection-end-line="190" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dws_ads/L6UphToLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1495">
+          <caret line="93" column="54" selection-start-line="93" selection-start-column="54" selection-end-line="93" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dwd_dws/PassStationCaculate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sprint5/sql_ads/sprint_five_l10_uph_lastweek_ads.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2093">
+          <caret line="91" column="23" lean-forward="true" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint3/dws_ads/L6FpyLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4508">
+          <caret line="223" column="46" selection-start-line="223" selection-start-column="38" selection-end-line="223" selection-end-column="46" />
           <folding>
-            <element signature="method#getPuts#0;class#BeanGetter#0" />
-            <element signature="method#checkSqlSchema#0;class#BeanGetter#0" />
-            <element signature="method#checkSqlSchema#1;class#BeanGetter#0" />
-            <element signature="method#getDefaultOrderColumnNames#0;class#BeanGetter#0" />
-            <element signature="method#getDefaultOrderColumnNames#1;class#BeanGetter#0" />
-            <element signature="method#BeanGetter#0;class#BeanGetter#0" />
-            <element signature="method#initClassPool#0;class#BeanGetter#0" />
-            <element signature="method#creSchema#0;class#BeanGetter#0" />
-            <element signature="method#creSchema#1;class#BeanGetter#0" />
-            <element signature="method#creHSchema#0;class#BeanGetter#0" />
-            <element signature="method#creHSchema#1;class#BeanGetter#0" />
-            <element signature="method#removeUnNeedColumn#0;class#BeanGetter#0" />
-            <element signature="method#creRowPut#0;class#BeanGetter#0" />
-            <element signature="method#creMapPut#0;class#BeanGetter#0" />
-            <element signature="method#initYamlObject#0;class#BeanGetter#0" />
-            <element signature="method#initHBeanMeta#0;class#BeanGetter#0" />
-            <element signature="method#initBeanMeta#0;class#BeanGetter#0" />
-            <element signature="method#upFirst#0;class#BeanGetter#0" />
-            <element signature="method#clazzMakeField#0;class#BeanGetter#0" />
-            <element signature="method#clazzMakeField#1;class#BeanGetter#0" />
-            <element signature="method#getBaseTypeFullName#0;class#BeanGetter#0" />
-            <element signature="method#getTypeSimpleName#0;class#BeanGetter#0" />
-            <element signature="method#subFromEndCh#0;class#BeanGetter#0" />
-            <element signature="method#makeCtClassStack#0;class#BeanGetter#0" />
-            <element signature="method#checkYamlType#0;class#BeanGetter#0" />
-            <element signature="method#checkBaseType#0;class#BeanGetter#0" />
-            <element signature="method#getSchemaField#0;class#BeanGetter#0" />
-            <element signature="method#getSchemaFieldType#0;class#BeanGetter#0" />
-            <element signature="method#checkNameIsRowKey#0;class#BeanGetter#0" />
-            <element signature="method#existsHTable#0;class#BeanGetter#0" />
-            <element signature="method#existsTable#0;class#BeanGetter#0" />
-            <element signature="method#existsTableFamily#0;class#BeanGetter#0" />
-            <element signature="method#isNulls#0;class#BeanGetter#0" />
-            <element signature="method#readResolve#0;class#BeanGetter#0" />
+            <element signature="method#fypL6byDay#0;class#L6FpyLine#0" />
+            <element signature="method#fypL6byWeek#0;class#L6FpyLine#0" />
+            <element signature="method#fypL6byMonth#0;class#L6FpyLine#0" />
+            <element signature="method#fypL6byQuarter#0;class#L6FpyLine#0" />
+            <element signature="method#fypL6byYear#0;class#L6FpyLine#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dws_ads/FtyDwsToAdsSix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+        <state relative-caret-position="276">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l10_day_output.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dwd_dws/FtyDwdToDwsSix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="276">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/beans/dwd_beans.yml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dws_ads/service/AdsDowntimeSpringFiveService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        <state relative-caret-position="1127">
+          <caret line="81" column="26" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/beans/dws_beans.yml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dwd_dws/dto/DWDProductionOutputDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        <state relative-caret-position="368">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/ods_dwd/ProductionStationDSN.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dws_ads/service/issue/category/IssueCategoryHandoverHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2093">
-          <caret line="194" column="33" selection-start-line="194" selection-start-column="33" selection-end-line="194" selection-end-column="33" />
+        <state relative-caret-position="759">
+          <caret line="46" column="63" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dws_ads/L10FpyCalculateSprintFourToLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dws_ads/L10UphactualCalculateSprintFourToLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2208">
+          <caret line="121" column="39" selection-start-line="121" selection-start-column="16" selection-end-line="121" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dws_ads/ProductionMachineMaintenance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="28" column="103" selection-start-line="28" selection-start-column="101" selection-end-line="28" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/config/sprint5/dwd_dws/production_output/ProductionOutputDayToHours.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dwd_dws/bean/DWDProductionMachineMaintenance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4692">
+          <caret line="221" column="44" selection-start-line="221" selection-start-column="44" selection-end-line="221" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dwd_dws/ProductionMachineMaintenance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-552">
+          <caret line="40" column="35" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+        <state relative-caret-position="368">
+          <caret line="34" column="46" lean-forward="true" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/com/tm/dl/javasdk/dpspark/mysql/DPMysql.class">
+    <entry file="file://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/2.0.0/dpsparksdk-2.0.0.pom">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dws_ads/ProductionOutputHours.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="122" column="153" selection-start-line="122" selection-start-column="137" selection-end-line="122" selection-end-column="153" />
+        <state relative-caret-position="460">
+          <caret line="48" column="12" lean-forward="true" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/beans/ProductionOutput.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/com/tm/dl/javasdk/dpspark/mysql/DPMysql.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="29" />
+        <state relative-caret-position="-6603">
+          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/org/apache/spark/sql/SparkSession.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dwd_dws/DailyRepairCaculate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1150">
-          <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+        <state relative-caret-position="-31">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/beans/ManualHour.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/com/tm/dl/javasdk/dpspark/hbase/DPHbase.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="23" />
+        <state relative-caret-position="-552">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dws_ads/DSNUPPHCalculate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17020">
-          <caret line="761" column="141" selection-start-line="761" selection-start-column="8" selection-end-line="761" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/PersonalWorkHourCalculate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1771">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_day_output.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/DayOutPutCalculate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4554">
-          <caret line="232" column="90" selection-start-line="232" selection-start-column="82" selection-end-line="232" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/beans/DsnDayOutPut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="37" selection-start-column="32" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/beans/EHR_MAN_HOUR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_day_upph.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4370">
-          <caret line="190" column="30" selection-start-line="190" selection-start-column="30" selection-end-line="190" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_month_upph.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4232">
-          <caret line="184" column="69" selection-start-line="184" selection-start-column="69" selection-end-line="184" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_week_upph.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5152">
-          <caret line="224" column="41" selection-start-line="224" selection-start-column="41" selection-end-line="224" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/dwd_dws/udf/CalculateYearWeek.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dwd_dws/udf/CalculateYearWeek.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dwd_dws/L6Oee1DwdToDws.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4392">
+          <caret line="53" column="84" lean-forward="true" selection-start-line="53" selection-start-column="84" selection-end-line="53" selection-end-column="84" />
+          <folding>
+            <element signature="method#l6OeeCalculateCQ#0;class#L6Oee1DwdToDws#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/DpMysql.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="124" column="25" lean-forward="true" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/util/batchData/BatchGetter.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/com/tm/dl/javasdk/dpspark/sqlserver/DPSqlServer.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1771">
-          <caret line="391" column="34" selection-start-line="391" selection-start-column="34" selection-end-line="391" selection-end-column="34" />
+        <state relative-caret-position="-2290">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint1_2/dwd_dws/DayOutPutCalculate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="291" lean-forward="true" selection-start-line="291" selection-end-line="291" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/org/apache/spark/api/java/JavaSparkContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="97" column="15" selection-start-line="97" selection-start-column="15" selection-end-line="97" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/treasuremountain/datalake/dpsparksdk/2.0.0/dpsparksdk-2.0.0.jar!/com/tm/dl/javasdk/dpspark/DPSparkApp.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="85" column="52" selection-start-line="85" selection-start-column="36" selection-end-line="85" selection-end-column="52" />
           <folding>
-            <element signature="initializer##0;class#BatchGetter#0" />
-            <element signature="e#2514#3649#0" />
-            <element signature="e#3655#4273#0" />
-            <element signature="e#4414#4904#0" />
-            <element signature="e#4910#5959#0" />
-            <element signature="e#5966#7897#0" />
-            <element signature="e#7903#11318#0" />
-            <element signature="e#11324#12433#0" />
-            <element signature="e#12439#12658#0" />
-            <element signature="e#12945#14999#0" />
-            <element signature="e#15005#15929#0" />
-            <element signature="e#15935#16081#0" />
-            <element signature="e#16249#17203#0" />
-            <element signature="e#17209#17350#0" />
-            <element signature="e#17356#18146#0" />
-            <element signature="e#18153#18928#0" />
-            <element signature="e#18934#19601#0" />
-            <element signature="e#19607#20531#0" />
-            <element signature="e#20537#20803#0" />
-            <element signature="e#20809#21002#0" />
-            <element signature="e#21008#21656#0" />
-            <element signature="e#21662#22279#0" />
-            <element signature="e#22285#22935#0" />
-            <element signature="e#22941#23665#0" />
-            <element signature="e#23671#23842#0" />
-            <element signature="e#23848#24341#0" />
-            <element signature="e#24347#24512#0" />
-            <element signature="e#24518#25001#0" />
-            <element signature="e#25007#25483#0" />
-            <element signature="e#25489#25971#0" />
-            <element signature="e#25977#26453#0" />
-            <element signature="e#26460#26899#0" />
-            <element signature="e#27037#27473#0" />
-            <element signature="e#27479#27608#0" />
-            <element signature="e#27614#28048#0" />
-            <element signature="e#28054#28476#0" />
-            <element signature="e#28482#28680#0" />
-            <element signature="e#28686#29889#0" />
-            <element signature="e#29895#30750#0" />
-            <element signature="e#30756#30886#0" />
-            <element signature="e#30892#31511#0" />
-            <element signature="e#31517#31763#0" />
-            <element signature="e#31769#32306#0" />
-            <element signature="e#32312#32518#0" />
-            <element signature="e#32524#32771#0" />
-            <element signature="e#33063#33676#0" />
-            <element signature="e#33682#33898#0" />
-            <element signature="e#33904#34255#0" />
-            <element signature="e#34261#34672#0" />
-            <element signature="e#35636#36165#0" />
-            <element signature="e#37599#38110#0" />
-            <element signature="e#38116#38478#0" />
-            <element signature="e#38485#38619#0" />
-            <element signature="e#38625#38751#0" />
-            <element signature="e#38856#38967#0" />
+            <element signature="e#14193#14194#0" expanded="true" />
+            <element signature="e#14265#14266#0" expanded="true" />
+            <element signature="e#14312#14313#0" expanded="true" />
+            <element signature="e#14380#14381#0" expanded="true" />
+            <element signature="e#14525#14526#0" expanded="true" />
+            <element signature="e#14560#14561#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/temporary/LevelDayOutPut.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/foxconn/dpm/sprint5/dws_ads/ProductionUpphSprintFive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36386">
-          <caret line="1615" column="53" selection-start-line="1615" selection-start-column="53" selection-end-line="1615" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#9388#9585#0" />
-            <element signature="e#9591#9828#0" />
-            <element signature="e#10451#10497#0" />
-            <element signature="e#10505#10736#0" />
-            <element signature="e#10802#10855#0" />
-            <element signature="e#12101#12147#0" />
-            <element signature="e#12153#12194#0" />
-            <element signature="e#12203#12249#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_quarter_upph.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4784">
-          <caret line="208" column="123" selection-start-line="208" selection-start-column="116" selection-end-line="208" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/metafile/sqls/sql_temp/calcute_l5_6_10_year_upph.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="186" column="41" lean-forward="true" selection-start-line="186" selection-start-column="41" selection-end-line="186" selection-end-column="41" />
+        <state relative-caret-position="230">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1277,7 +2083,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>data-engine:jar</last-edited>
+          <last-edited>sparkETL</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1314,7 +2120,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>JDK1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1331,6 +2137,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1350,7 +2157,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.treasuremountain.datalake.dpsparksdk:dpsparksdk:2.0.0</last-edited>
+          <last-edited>scala-sdk-2.11.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

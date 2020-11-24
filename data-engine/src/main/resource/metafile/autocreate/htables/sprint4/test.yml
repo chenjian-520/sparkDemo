@@ -1,0 +1,30 @@
+###########################################################
+#                  FOLD ID
+#模型层
+#    ODS=767ae0da-5435-489b-973a-1b6ba6895862
+#    DWD=4369863e-6f12-4b94-99af-a976ea6cc6ef
+#    DWS=a09dbedf-cbfd-40a2-9e4f-4fa114c7f1c1
+#业务层
+#    ODS=dc4df803-fe01-4241-9e39-a7f0f2b9b80c
+#    DWD=db64ac12-698a-4865-adcd-a7ca2addf52e
+#    DWS=610f0f1b-3a54-4284-8c37-0397098cf674
+#
+###########################################################
+dpm_dim_test_two:
+  $$_TABLESCHE_CONFIG_$$:
+    - 'instance_fold_id=4369863e-6f12-4b94-99af-a976ea6cc6ef'
+    - 'business_fold_id=db64ac12-698a-4865-adcd-a7ca2addf52e'
+    - 'hbtableName=dpm_dim_test_two'
+    - 'hbtableDesc=API TEST'
+    - 'hbtableSplitinfo=01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19'
+  DPM_DIM_TEST_ONE:
+    - '$$_FAMILY_STATUE_$$=add'
+    - id=String
+    - SiteCodeID=String
+    - SiteCode=String
+    - SiteDesc=String
+    - InsertDT=String
+    - InsertBy=String
+    - UpdateDT=String
+    - UpdateBy=String
+    - DataFrom=String

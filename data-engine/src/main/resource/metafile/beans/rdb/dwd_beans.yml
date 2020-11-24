@@ -1,0 +1,132 @@
+dpm_dwd_personnel_emp_workhours:
+  - Rowkey=String
+  - site_code=String
+  - bg=String
+  - sbg=String
+  - bu=String
+  - mbu=String
+  - department=String
+  - team=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - department_code=String
+  - group_code=String
+  - work_dt=String
+  - work_shift=String
+  - humresource_type=String
+  - emp_id=String
+  - onduty_states=String
+  - attendance_workhours=String
+  - overtime_hours=String
+  - leave_hours=String
+  - data_granularity=String
+  - update_dt=String
+  - update_by=String
+  - data_from=String
+
+dpm_dws_personnel_emp_workhours_dd :
+  - Rowkey=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - line_code=String
+  - work_dt=String
+  - work_shift=String
+  - humresource_type=String
+  - attendance_qty=String
+  - act_attendance_workhours=String
+  - data_granularity=String
+  - update_dt=String
+  - update_by=String
+  - data_from=String
+
+
+dpm_dwd_production_output:
+  - Rowkey=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - area_code=String
+  - line_code=String
+  - machine_id=String
+  - part_no=String
+  - sku=String
+  - platform=String
+  - customer=String
+  - wo=String
+  - workorder_type=String
+  - work_dt=String
+  - work_shift=String
+  - sn=String
+  - station_code=String
+  - station_name=String
+  - is_fail=String
+  - scan_by=String
+  - scan_dt=String
+  - output_qty=String
+  - update_dt=String
+  - update_by=String
+  - data_from=String
+
+dpm_dwd_production_planning_day:
+  - Rowkey=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - area_code=String
+  - line_code=String
+  - machine_id=String
+  - work_dt=String
+  - key=String
+  - schedule_qty=Integer
+  - update_dt=String
+  - update_by=String
+  - data_from=String
+
+#=================================================
+#   OTD
+#=================================================
+#day_id+site_code+level_code+dn_no+dn_item+po_no+po_item+customer
+dpm_dwd_production_scm_ship_qty:
+  - Rowkey=String
+  - day_id=String
+  - site_code=String
+  - level_code=String
+  - plant_code=String
+  - customer=String
+  - so_no=String
+  - so_item=String
+  - po_no=String
+  - po_item=String
+  - dn_no=String
+  - dn_item=String
+  - customer_pn=String
+  - shiptocountry=String
+  - commit_ship_qty=String
+  - update_dt=String
+  - update_by=String
+  - data_from=String
+
+#day_id+site_code+level_code+dn_no+dn_item+po_no+po_item+customer
+dpm_dwd_production_bb_ship_qty:
+  - Rowkey=String
+  - day_id=String
+  - site_code=String
+  - level_code=String
+  - plant_code=String
+  - customer=String
+  - so_no=String
+  - so_item=String
+  - po_no=String
+  - po_item=String
+  - dn_no=String
+  - customer_pn=String
+  - shiptocountry=String
+  - ship_qty=String
+  - update_dt=String
+  - update_by=String
+  - data_from=String

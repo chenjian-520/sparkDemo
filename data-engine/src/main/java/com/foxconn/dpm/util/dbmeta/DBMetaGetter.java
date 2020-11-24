@@ -29,7 +29,6 @@ public class DBMetaGetter implements Serializable, MetaGetterRegistry {
                     try {
                         properties.load(DBMetaGetter.class.getClassLoader().getResourceAsStream("metafile/db" + "/" + ((String) value)));
                     } catch (IOException e) {
-                        e.printStackTrace();
                     }
                     HashMap<String, HashMap<String, String>> datakeys = new HashMap<>();
                     properties.forEach(new BiConsumer<Object, Object>() {

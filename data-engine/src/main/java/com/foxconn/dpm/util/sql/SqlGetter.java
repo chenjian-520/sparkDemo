@@ -3,10 +3,13 @@ package com.foxconn.dpm.util.sql;
 import com.foxconn.dpm.util.MetaGetter;
 import com.foxconn.dpm.util.MetaGetterRegistry;
 import org.ho.yaml.Yaml;
+import scala.Tuple2;
 
 import java.io.*;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Stack;
 import java.util.function.BiConsumer;
 
 /**
@@ -24,8 +27,6 @@ public class SqlGetter implements Serializable, MetaGetterRegistry {
     }
 
     public static void main(String[] args) {
-        final SqlGetter instance = getInstance();
-        System.out.println(instance);
     }
 
     private SqlGetter() {
@@ -41,40 +42,51 @@ public class SqlGetter implements Serializable, MetaGetterRegistry {
                             return;
                         }
                         String[] sqlDirs = ((String) o).split("\\.");
-                        String sqlDir = sqlDirs[0] + "/" + sqlDirs[1] + "/" + sqlDirs[2];
+                        StringBuilder sb = new StringBuilder();
+                        for (int i = 0; i < sqlDirs.length - 2; i++) {
+                            sb.append(sqlDirs[i]);
+                            if (i < sqlDirs.length - 3) {
+                                sb.append("/");
+                            }
+                        }
+                        String sqlDir = sb.toString();
+                        try {
+                            if (((String) o2).endsWith(".sql")) {
+                                initSqlFile(sqlDir, (String) o, ((String) o2));
+                            }
+                            if (((String) o2).endsWith(".yml")) {
+                                initYmlFile(sqlDir, ((String) o), (String) o2);
+                            }
+                        } catch (Exception e) {
+                        }
 
-                        if (((String) o2).endsWith(".sql")){
-                            initSqlFile(sqlDir, (String) o, ((String) o2));
-                        }
-                        if (((String) o2).endsWith(".yml")){
-                            initYmlFile(sqlDir, ((String) o), (String) o2);
-                        }
                     }
                 });
             }
         }
     }
 
-    private void initYmlFile(String sqlDir, String o , String o2){
+    private void initYmlFile(String sqlDir, String o, String o2) {
         try {
 
             HashMap<String, String> sqlYmls = (HashMap<String, String>) new Yaml().load(SqlGetter.class.getClassLoader().getResourceAsStream(sqlDir + "/" + o2));
-            if (sqlYmls == null){
+            if (sqlYmls == null) {
                 return;
-            }else{
+            } else {
                 sqlYmls.forEach(new BiConsumer<String, String>() {
                     @Override
                     public void accept(String name, String sql) {
-                        sqlMap.put(name, sql.replace("\n", " "));
+                        sqlMap.put(name, cleanSql(sql));
                     }
                 });
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             return;
         }
     }
 
-    private void initSqlFile(String sqlDir, String o, String o2){
+
+    private void initSqlFile(String sqlDir, String o, String o2) {
 
 
         URL resource = SqlGetter.class.getClassLoader().getResource(sqlDir + "/" + ((String) o2));
@@ -88,7 +100,6 @@ public class SqlGetter implements Serializable, MetaGetterRegistry {
         try {
             is = resource.openStream();
         } catch (IOException e) {
-            e.printStackTrace();
         }
         if (is == null) {
             return;
@@ -107,22 +118,106 @@ public class SqlGetter implements Serializable, MetaGetterRegistry {
             if (sql == null || sql == "") {
                 return;
             }
-            if (sql.substring(sql.length() - 1, sql.length()).equals(";")) {
-                sql = sql.substring(0, sql.length() - 1);
-            }
-            sqlMap.put(((String) o2), sql.replace("\n", " "));
+            sqlMap.put(((String) o2), cleanSql(sql));
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
-            e.printStackTrace();
         } finally {
             try {
                 bis.close();
                 bos.close();
             } catch (IOException e) {
-                e.printStackTrace();
             }
         }
+    }
+
+    public ArrayList<String> getRuleTempleSqls(String sqlKey, String ruleCode, Object ... ruleKeyParams) {
+        try {
+            switch (ruleCode) {
+                case "DEFAULT":
+                    return getDeftTempleSqls(Get(sqlKey), new Tuple2[]{
+                            new Tuple2<>("$ETL_TIME$", new String[0]),
+                            new Tuple2<>("$FORMAT_TIME_RANGE$", new String[]{"work_dt","calculateYearWeek"})
+                    });
+                default:
+                    return null;
+            }
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    /**
+     * ====================================================================
+     * 描述:
+     * <p>
+     * 按照指定规则进行默认sql模板构造
+     * <p>
+     * 参数:params
+     * 0: 规则key
+     * 1: SQL
+     * 2 ...: 替换内容
+     * <p>
+     * 返回值: SQL集合
+     * ====================================================================
+     */
+    public ArrayList<String> getDeftTempleSqls(String sql, Tuple2<String, String[]>[] ruleKeyParams) {
+        ArrayList<String> rsSql = new ArrayList<>();
+        if (ruleKeyParams == null || ruleKeyParams.length == 0) {
+            rsSql.add(sql);
+            return rsSql;
+        }
+        Stack<String> inStack = new Stack<>();
+        inStack.push(sql);
+        for (int i = 0; i < ruleKeyParams.length; i++) {
+            deftStructCase(ruleKeyParams[i], inStack);
+        }
+        rsSql.addAll(inStack);
+        return rsSql;
+    }
+
+    public void deftStructCase(Tuple2<String, String[]> kV, Stack<String> inStack) {
+        Stack<String> tempStack = new Stack<>();
+        switch (kV._1) {
+            case "$ETL_TIME$":
+                String etl_time = String.valueOf(System.currentTimeMillis());
+                while (!inStack.isEmpty()) {
+                    tempStack.push(inStack.pop().replace("$ETL_TIME$", etl_time));
+                }
+                break;
+            case "$FORMAT_TIME_RANGE$":
+                while (!inStack.isEmpty()) {
+                    String sql = inStack.pop();
+                    String dateColumnName = kV._2[0];
+                    String weekCalculateUDFName = kV._2[1];
+                    tempStack.push(sql.replace("$FORMAT_TIME_RANGE$", "cast( "+ dateColumnName +" as VARCHAR(32))"));
+                    tempStack.push(sql.replace("$FORMAT_TIME_RANGE$", weekCalculateUDFName + "( "+ dateColumnName +" )"));
+                    tempStack.push(sql.replace("$FORMAT_TIME_RANGE$", "cast(from_unixtime(to_unix_timestamp( "+ dateColumnName +" , 'yyyy-MM-dd'), 'yyyyMM') AS INTEGER)"));
+                    tempStack.push(sql.replace("$FORMAT_TIME_RANGE$", "cast(concat(year( "+ dateColumnName +" ), quarter( "+ dateColumnName +" )) AS INTEGER)"));
+                    tempStack.push(sql.replace("$FORMAT_TIME_RANGE$", "year( "+ dateColumnName +" )"));
+                }
+                break;
+        }
+        inStack.addAll(tempStack);
+    }
+
+    private String cleanSql(String prepareCleanSql) {
+        /*
+         * ====================================================================
+         * 描述:
+         *      去除YAML文件中的起始和结束段
+         * ====================================================================
+         */
+        prepareCleanSql = prepareCleanSql.trim().replace("\n", " ");
+        if (prepareCleanSql.startsWith("\"")) {
+            prepareCleanSql = prepareCleanSql.substring(1, prepareCleanSql.length());
+        }
+        if (prepareCleanSql.endsWith("\"")) {
+            prepareCleanSql = prepareCleanSql.substring(0, prepareCleanSql.length() - 1);
+        }
+        if (prepareCleanSql.endsWith(";")) {
+            prepareCleanSql = prepareCleanSql.substring(0, prepareCleanSql.length() - 1);
+        }
+        return prepareCleanSql;
     }
 
     private static final class StaticNestedInstance {

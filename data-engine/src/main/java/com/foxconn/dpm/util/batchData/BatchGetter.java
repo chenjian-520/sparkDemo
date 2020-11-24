@@ -1,27 +1,27 @@
 package com.foxconn.dpm.util.batchData;
 
+import com.foxconn.dpm.sprint1_2.dws_ads.beans.DpmDwsProductionOutputDD;
 import com.foxconn.dpm.util.MetaGetter;
 import com.foxconn.dpm.util.MetaGetterRegistry;
 import com.google.gson.Gson;
-import lombok.var;
 import org.apache.hadoop.hbase.client.Result;
 import org.apache.hadoop.hbase.util.Bytes;
-import org.apache.kafka.common.protocol.types.Field;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.RowFactory;
 import org.apache.spark.sql.types.StructField;
+import scala.Int;
 import scala.Tuple2;
-import sun.util.calendar.Gregorian;
 
-import java.io.ObjectStreamException;
-import java.io.Serializable;
+import java.io.*;
+import java.lang.reflect.Field;
+import java.math.BigDecimal;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.sql.Time;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.Year;
+import java.sql.Timestamp;
+import java.text.*;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author HS
@@ -123,7 +123,6 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
 
 
     public static void main(String[] args) {
-        System.out.println(MetaGetter.getBatchGetter().getStDateQuarterAdd(-4));
     }
 
 
@@ -296,7 +295,7 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
         return new Tuple2<>(startDate, endDate);
     }
 
-    public Tuple2<String, String> getStDateWeek(int week, String... sep) {
+    public Tuple2<String, String> getStDateWeek(int week) {
         calendar.setTime(new Date());
         int weekId = calendar.get(Calendar.YEAR) * 100 + week;
         return yearWeekCache.get(weekId);
@@ -307,13 +306,96 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
         try {
             return weekYear != null ? weekYear : loadYear(date);
         } catch (ParseException e) {
-            e.printStackTrace();
             return 0;
         }
     }
 
-    //最大不超过530周，因为一年最少53周，所以正负10年界限为530周
+    public int getStDateDayCount(String startDay, String endDay) {
+        Double v = -1.0;
+        try {
+            v = (simpleDateFormat.parse(endDay).getTime() + 0.0 - simpleDateFormat.parse(startDay).getTime() + 0.0) / 1000 / 60 / 60 / 24;
+            if (v.intValue() < v) {
+                v += 1;
+            }
+            return v.intValue();
+        } catch (ParseException e) {
+        }
+        return -1;
+    }
+
+    public int getWeekDayCount(int yearWeek) {
+        //202031
+        Tuple2<String, String> dayRange = yearWeekCache.get(yearWeek);
+        return getStDateDayCount(dayRange._1, dayRange._2);
+    }
+
+
+    //yyyy-MM-dd
+    public int getStDateMonthDayCount(String dayDate, String... sep) {
+        String sepstr = (sep == null || sep.length == 0 ? "" : sep[0]);
+        Calendar calendar = Calendar.getInstance();
+        try {
+            calendar.setTime(new SimpleDateFormat("yyyy" + sepstr + "MM" + sepstr + "dd").parse(dayDate));
+            return calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+        } catch (ParseException e) {
+        }
+        return -1;
+    }
+
+    public int getStDateQuarterDayCount(String dayDate) {
+        String sepstr = "-";
+        Tuple2<String, String> quarterRange = getStTargetQuarterYear(Integer.valueOf(dayDate.replace(sepstr, "").substring(0, 4)), getTargetDateQuarter(dayDate, sepstr), sepstr);
+        return getStDateDayCount(quarterRange._1, quarterRange._2);
+    }
+
+    public int getTargetDateQuarter(String dayDate, String... sep) {
+        String sepstr = (sep == null || sep.length == 0 ? "" : sep[0]);
+        Calendar calendar = Calendar.getInstance();
+        try {
+            calendar.setTime(new SimpleDateFormat("yyyy" + sepstr + "MM" + sepstr + "dd").parse(dayDate));
+        } catch (ParseException e) {
+        }
+        int quarter = 1;
+        int m = calendar.get(Calendar.MONTH) + 1;
+        if (m >= 1 && m <= 3) {
+            quarter = 1;
+        }
+        if (m >= 4 && m <= 6) {
+            quarter = 2;
+        }
+        if (m >= 7 && m <= 9) {
+            quarter = 3;
+        }
+        if (m >= 10 && m <= 12) {
+            quarter = 4;
+        }
+        return quarter;
+    }
+
+    public int getStDateYearDayCount(String dayDate, String... sep) {
+        String sepstr = (sep == null || sep.length == 0 ? "" : sep[0]);
+        Calendar calendar = Calendar.getInstance();
+        try {
+            calendar.setTime(new SimpleDateFormat("yyyy" + sepstr + "MM" + sepstr + "dd").parse(dayDate));
+            return calendar.getActualMaximum(Calendar.DAY_OF_YEAR);
+        } catch (ParseException e) {
+        }
+        return -1;
+    }
+
     public Tuple2<String, String> getStDateWeekAdd(int weekAdd, String... sep) {
+        Tuple2<String, String> weekAddSep = getStDateWeekAddSep(weekAdd);
+        if (sep == null || sep.length == 0) {
+            return new Tuple2<String, String>(weekAddSep._1.replace("-", ""), weekAddSep._2.replace("-", ""));
+        } else {
+            return new Tuple2<String, String>(weekAddSep._1.replace("-", sep[0]), weekAddSep._2.replace("-", sep[0]));
+        }
+
+    }
+
+    //最大不超过530周，因为一年最少53周，所以正负10年界限为530周
+    //注意该方法返回的日期是使用 - 分隔的。。。。没有sep约束
+    public Tuple2<String, String> getStDateWeekAddSep(int weekAdd) {
         try {
             int nowWeekId = getNowWeek();
 
@@ -364,26 +446,41 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
                 }
             }
         } catch (ParseException e) {
-            e.printStackTrace();
             return null;
         }
         return null;
     }
 
     public Tuple2<String, String> getStDateWeekStampAdd(int weekAdd, String... sep) {
-        Tuple2<String, String> stDateWeekAdd = getStDateWeekAdd(weekAdd, sep);
+        Tuple2<String, String> stDateWeekAdd = getStDateWeekAdd(weekAdd, "-");
         if (stDateWeekAdd == null) {
             return null;
         }
         try {
-            String startDate = String.valueOf((sep != null && sep.length == 1) ? (new SimpleDateFormat("yyyy" + sep[0] + "MM" + sep[0] + "dd").parse(stDateWeekAdd._1)).getTime() : (new SimpleDateFormat("yyyyMMdd").parse(stDateWeekAdd._1)).getTime());
-            String endDate = String.valueOf((sep != null && sep.length == 1) ? (new SimpleDateFormat("yyyy" + sep[0] + "MM" + sep[0] + "dd").parse(stDateWeekAdd._2)).getTime() : (new SimpleDateFormat("yyyyMMdd").parse(stDateWeekAdd._2).getTime()));
+            String sepStr = "-";
+            String startDate = String.valueOf(new SimpleDateFormat("yyyy" + sepStr + "MM" + sepStr + "dd").parse(stDateWeekAdd._1).getTime());
+            String endDate = String.valueOf(new SimpleDateFormat("yyyy" + sepStr + "MM" + sepStr + "dd").parse(stDateWeekAdd._2).getTime());
             return new Tuple2<String, String>(startDate, endDate);
         } catch (ParseException e) {
-            e.printStackTrace();
             return null;
         }
     }
+
+    public Tuple2<String, String> getStDateMonthStampAdd(int monthAdd, String... sep) {
+        Tuple2<String, String> stDateMonthAdd = getStDateMonthAdd(monthAdd, sep);
+        if (stDateMonthAdd == null) {
+            return null;
+        }
+        try {
+            String sepStr = sep == null || sep.length == 0 ? "" : sep[0];
+            String startDate = String.valueOf(new SimpleDateFormat("yyyy" + sepStr + "MM" + sepStr + "dd").parse(stDateMonthAdd._1).getTime());
+            String endDate = String.valueOf(new SimpleDateFormat("yyyy" + sepStr + "MM" + sepStr + "dd").parse(stDateMonthAdd._2).getTime());
+            return new Tuple2<String, String>(startDate, endDate);
+        } catch (ParseException e) {
+            return null;
+        }
+    }
+
 
     public Tuple2<String, String> getStDateMonthAdd(int monthAdd, String... sep) {
         return getStDateMonth(getNowMonth() + monthAdd, sep);
@@ -399,11 +496,11 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
             return null;
         }
         try {
-            String startDate = String.valueOf((sep != null && sep.length == 1) ? (new SimpleDateFormat("yyyy" + sep[0] + "MM" + sep[0] + "dd").parse(stDateQuarterAdd._1)).getTime() : (new SimpleDateFormat("yyyyMMdd").parse(stDateQuarterAdd._1)).getTime());
-            String endDate = String.valueOf((sep != null && sep.length == 1) ? (new SimpleDateFormat("yyyy" + sep[0] + "MM" + sep[0] + "dd").parse(stDateQuarterAdd._2)).getTime() : (new SimpleDateFormat("yyyyMMdd").parse(stDateQuarterAdd._2).getTime()));
+            String sepStr = sep == null || sep.length == 0 ? "" : sep[0];
+            String startDate = String.valueOf(new SimpleDateFormat("yyyy" + sepStr + "MM" + sepStr + "dd").parse(stDateQuarterAdd._1).getTime());
+            String endDate = String.valueOf(new SimpleDateFormat("yyyy" + sepStr + "MM" + sepStr + "dd").parse(stDateQuarterAdd._2).getTime());
             return new Tuple2<String, String>(startDate, endDate);
         } catch (ParseException e) {
-            e.printStackTrace();
             return null;
         }
     }
@@ -424,7 +521,6 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
             calendar.set(Calendar.MILLISECOND, 0);
             return new SimpleDateFormat("yyyy" + sep + "MM" + sep + "dd").format(calendar.getTime());
         } catch (ParseException e) {
-            e.printStackTrace();
             return null;
         }
     }
@@ -463,7 +559,6 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
                 return String.valueOf(new SimpleDateFormat("yyyyMMdd").parse(stDateDayStrAdd).getTime());
             }
         } catch (ParseException e) {
-            e.printStackTrace();
             return null;
         }
     }
@@ -474,11 +569,11 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
             return null;
         }
         try {
-            String startDate = String.valueOf((sep != null && sep.length == 1) ? (new SimpleDateFormat("yyyy" + sep[0] + "MM" + sep[0] + "dd").parse(stDateYearAdd._1)).getTime() : (new SimpleDateFormat("yyyyMMdd").parse(stDateYearAdd._1)).getTime());
-            String endDate = String.valueOf((sep != null && sep.length == 1) ? (new SimpleDateFormat("yyyy" + sep[0] + "MM" + sep[0] + "dd").parse(stDateYearAdd._2)).getTime() : (new SimpleDateFormat("yyyyMMdd").parse(stDateYearAdd._2).getTime()));
+            String sepStr = sep == null || sep.length == 0 ? "" : sep[0];
+            String startDate = String.valueOf(new SimpleDateFormat("yyyy" + sepStr + "MM" + sepStr + "dd").parse(stDateYearAdd._1).getTime());
+            String endDate = String.valueOf(new SimpleDateFormat("yyyy" + sepStr + "MM" + sepStr + "dd").parse(stDateYearAdd._2).getTime());
             return new Tuple2<String, String>(startDate, endDate);
         } catch (ParseException e) {
-            e.printStackTrace();
             return null;
         }
     }
@@ -488,7 +583,6 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
         try {
             return new SimpleDateFormat(regex).parse(dateTime).getTime();
         } catch (ParseException e) {
-            e.printStackTrace();
             return null;
         }
 
@@ -508,7 +602,6 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
                 return String.valueOf(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(stDataMiniteAdd).getTime());
             }
         } catch (ParseException e) {
-            e.printStackTrace();
             return null;
         }
     }
@@ -588,20 +681,18 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
     public int getNowYear() {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(new Date());
-        return calendar.get(calendar.YEAR);
+        return calendar.get(Calendar.YEAR);
     }
 
     public Integer formatInteger(Object obj) {
         try {
-            return Integer.parseInt(((String) obj).replace(",", "").trim().replace(" ", ""));
+            return Integer.parseInt((String.valueOf(obj)).replace(",", "").trim().replace(" ", ""));
         } catch (Exception e) {
             try {
 
                 if (String.valueOf(obj).length() != 0) {
-                    System.err.println("NumberFormatErr==========>>>>>" + obj);
                 }
             } catch (Exception eIn) {
-                e.printStackTrace();
             }
             return 0;
         }
@@ -609,12 +700,11 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
 
     public Double formatDouble(Object obj) {
         try {
-            return Double.parseDouble(((String) obj).replace(",", "").trim().replace(" ", ""));
+            return Double.parseDouble((String.valueOf(obj)).replace(",", "").trim().replace(" ", ""));
         } catch (Exception e) {
             try {
 
                 if (String.valueOf(obj).length() != 0) {
-                    System.err.println("NumberFormatErr==========>>>>>" + obj);
                 }
             } catch (Exception eIn) {
                 return 0.0;
@@ -625,15 +715,17 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
 
     public Float formatFloat(Object obj) {
         try {
-            return Float.parseFloat(((String) obj).replace(",", "").trim().replace(" ", ""));
+            float v = Float.parseFloat((String.valueOf(obj)).replace(",", "").trim().replace(" ", ""));
+            if (Float.isNaN(v) || Float.isInfinite(v)) {
+                v = 0f;
+            }
+            return v;
         } catch (Exception e) {
             try {
 
                 if (String.valueOf(obj).length() != 0) {
-                    System.err.println("NumberFormatErr==========>>>>>" + obj);
                 }
             } catch (Exception eIn) {
-                e.printStackTrace();
             }
             return 0.0f;
         }
@@ -641,20 +733,32 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
 
     public Long formatLong(Object obj) {
         try {
-            return Long.parseLong(((String) obj).replace(",", "").trim().replace(" ", ""));
+            return Long.parseLong((String.valueOf(obj)).replace(",", "").trim().replace(" ", ""));
         } catch (Exception e) {
             try {
 
                 if (String.valueOf(obj).length() != 0) {
-                    System.err.println("NumberFormatErr==========>>>>>" + obj);
                 }
             } catch (Exception eIn) {
-                e.printStackTrace();
             }
             return 0L;
         }
     }
 
+    public String formatDecimal(Object obj) {
+        NumberFormat numberInstance = NumberFormat.getNumberInstance();
+        NumberFormat decimalInstance = DecimalFormat.getNumberInstance();
+        numberInstance.setGroupingUsed(false);
+        try {
+            return decimalInstance.format(obj).replace(",", "");
+        } catch (Exception e) {
+            try {
+                return ((String) obj).replace(",", "");
+            } catch (Exception e1) {
+                return null;
+            }
+        }
+    }
 
     public String preFormatZeroStrLen(String w, int len, String... appendS) {
         String append = appendS != null && appendS.length == 1 ? appendS[0] : "0";
@@ -698,7 +802,6 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
         try {
             return new SimpleDateFormat(regex).parse(dateStr);
         } catch (ParseException e) {
-            System.out.println("err_date_str===>>>" + dateStr);
             return null;
         }
     }
@@ -711,7 +814,6 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
             try {
                 return formatDate(date, destPattern);
             } catch (Exception e) {
-                e.printStackTrace();
                 return null;
             }
         }
@@ -751,13 +853,12 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
             }
             return result;
         } catch (ParseException e) {
-            e.printStackTrace();
-            return null;
+            return false;
         }
     }
 
-    public String getStrArrayOrg(String sep, String... columnValues) {
-        getReplaceNullStr("-", columnValues);
+    public String getStrArrayOrg(String sep, String replaceNullStr, String... columnValues) {
+        getReplaceNullStr(replaceNullStr, columnValues);
         try {
             StringBuilder sb = null;
             if (columnValues == null || columnValues.length == 0) {
@@ -777,7 +878,6 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
                 return sb.toString();
             }
         } catch (Exception e) {
-            e.printStackTrace();
             return null;
         }
     }
@@ -802,7 +902,6 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
             }
             return String.valueOf(newChs);
         } catch (Exception e) {
-            e.printStackTrace();
             return null;
         }
     }
@@ -811,7 +910,6 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
         try {
             return this.gson.fromJson(batchData, LinkedList.class);
         } catch (Exception e) {
-            e.printStackTrace();
             return null;
         }
     }
@@ -829,7 +927,6 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
             }
             return data.size() > 0 ? data : null;
         } catch (Exception e) {
-            e.printStackTrace();
             return null;
         }
     }
@@ -838,7 +935,6 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
         try {
             return this.gson.toJson(datas);
         } catch (Exception e) {
-            e.printStackTrace();
             return null;
         }
     }
@@ -874,7 +970,6 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
                 return null;
             }
         } catch (Exception e) {
-            e.printStackTrace();
             return null;
         }
     }
@@ -884,13 +979,12 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
         return row != null ? row : null;
     }
 
-    public ArrayList<String> resultGetColumnsCount(Result result, String family, String... columnNames) {
-        ArrayList<String> columnValues = resultGetColumns(result, family, columnNames);
-        if (columnValues == null) {
+    public Integer resultGetColumnsCount(Result result, String family) {
+        NavigableMap<byte[], byte[]> familyMap = result.getFamilyMap(family.getBytes());
+        if (familyMap == null) {
             return null;
         } else {
-            columnValues.add("1");
-            return columnValues;
+            return familyMap.keySet().size();
         }
     }
 
@@ -906,12 +1000,88 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
         return columnValues;
     }
 
+    /*
+     * ====================================================================
+     * 描述:
+     *      通过值列表自动给javabean赋值
+     *      注意bean中的字段顺序序号和给定的值列表顺序一致
+     *
+     * ====================================================================
+     */
+    public <T> T getBeanDeftInit(T obj, ArrayList<String> rvs) {
+        try {
+            Field[] fields = ((T) obj).getClass().getDeclaredFields();
+            for (int i = 0; i < fields.length; i++) {
+                Field field = fields[i];
+                field.setAccessible(true);
+                try {
+                    field.set(obj, getStringTargetTypeObj(field.getType().getSimpleName(), rvs.get(i)));
+                } catch (Exception e) {
+                    try {
+                        field.set(obj, null);
+                    } catch (IllegalAccessException e1) {
+                    }
+                }
+            }
+        } catch (Exception e) {
+            return null;
+        }
+        return obj;
+    }
+
+    public Object getStringTargetTypeObj(String typeSimpleName, String value) {
+        try {
+            switch (typeSimpleName) {
+                case "String":
+                    return value;
+                case "Integer":
+                    return Integer.valueOf(value);
+                case "Long":
+                    return Long.valueOf(value);
+                case "Float":
+                    return Float.valueOf(value);
+                case "Double":
+                    return Double.valueOf(value);
+                case "Date":
+                    return value.matches("((^((1[8-9]\\d{2})|([2-9]\\d{3}))([-\\/\\._])(10|12|0?[13578])([-\\/\\._])(3[01]|[12][0-9]|0?[1-9])$)|(^((1[8-9]\\d{2})|([2-9]\\d{3}))([-\\/\\._])(11|0?[469])([-\\/\\._])(30|[12][0-9]|0?[1-9])$)|(^((1[8-9]\\d{2})|([2-9]\\d{3}))([-\\/\\._])(0?2)([-\\/\\._])(2[0-8]|1[0-9]|0?[1-9])$)|(^([2468][048]00)([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([3579][26]00)([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([1][89][0][48])([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([2-9][0-9][0][48])([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([1][89][2468][048])([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([2-9][0-9][2468][048])([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([1][89][13579][26])([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([2-9][0-9][13579][26])([-\\/\\._])(0?2)([-\\/\\._])(29)$))")
+                            ?
+                            DateFormat.getDateInstance().parse(value) != null
+                            : false;
+                case "Boolean":
+                    return Boolean.valueOf(value);
+                case "BigDecimal":
+                    return new BigDecimal(value);
+                case "Timestamp":
+                    return Timestamp.valueOf(value);
+            }
+        } catch (Exception e) {
+        }
+        return null;
+    }
+
+
+    //获取指定时间段的result
+    public boolean getFilterRangeTimeStampHBeans(Result result, String family, String timeColumnName, String targetTimeRegex, Long startStamp, Long endStamp) {
+        SimpleDateFormat format = new SimpleDateFormat(targetTimeRegex);
+        String work_dt = resultGetColumn(result, family, timeColumnName);
+        long work_dt_stamp = 0;
+        try {
+            work_dt_stamp = format.parse(work_dt).getTime();
+        } catch (ParseException e) {
+            return false;
+        }
+
+        if (work_dt_stamp >= startStamp && work_dt_stamp < endStamp) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     /**
      * Description
      * 该方法默认使用空串代替值
-     * <p>
      * Example
-     * <p>
      * Author HS
      * Version
      * Time 10:02 2019/12/30
@@ -934,6 +1104,7 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
             return null;
         }
     }
+
 
     public String resultGetColumn(Result result, String family, String columnName) {
         try {
@@ -988,7 +1159,6 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
             }
             return sb.toString();
         } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
         }
         return null;
     }
@@ -1014,6 +1184,28 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
         }
     }
 
+    public String formatUnSepStanderDate(String dateStr) {
+        StringBuilder sb = new StringBuilder();
+        if (dateStr.matches("^[\\d]+-[\\d]+-[\\d]+$")) {
+            String[] splitDate = dateStr.split("-");
+            if (splitDate.length == 3) {
+                Integer year = formatInteger(splitDate[0]);
+                Integer month = formatInteger(splitDate[1]);
+                Integer day = formatInteger(splitDate[2]);
+                return sb.append(year <= 9 ? "0" + year : year).append(month <= 9 ? "0" + month : month).append(day <= 9 ? "0" + day : day).toString();
+            }
+        } else if (dateStr.matches("^[\\d]+\\[\\d]+\\[\\d]+$")) {
+            String[] splitDate = dateStr.split("\\");
+            if (splitDate.length == 3) {
+                Integer year = formatInteger(splitDate[0]);
+                Integer month = formatInteger(splitDate[1]);
+                Integer day = formatInteger(splitDate[2]);
+
+                return sb.append(year <= 9 ? "0" + year : year).append(month <= 9 ? "0" + month : month).append(day <= 9 ? "0" + day : day).toString();
+            }
+        }
+        return dateStr;
+    }
 
     private BatchGetter() {
         if (null != StaticNestedInstance.instance) {
@@ -1032,4 +1224,107 @@ public class BatchGetter implements MetaGetterRegistry, Serializable {
     private Object readResolve() throws ObjectStreamException {
         return StaticNestedInstance.instance;
     }
+
+    public String replaceEmpStr(String str, String... replcaceStr) {
+        String rp = "";
+        if (replcaceStr != null && replcaceStr.length > 0) {
+            return str == null ? replcaceStr[0] : str;
+        } else {
+            return str == null ? rp : str;
+        }
+
+    }
+
+
+    public boolean matchesData(String dateStr) {
+        try {
+            return dateStr.matches("((^((1[8-9]\\d{2})|([2-9]\\d{3}))([-\\/\\._])(10|12|0?[13578])([-\\/\\._])(3[01]|[12][0-9]|0?[1-9])$)|(^((1[8-9]\\d{2})|([2-9]\\d{3}))([-\\/\\._])(11|0?[469])([-\\/\\._])(30|[12][0-9]|0?[1-9])$)|(^((1[8-9]\\d{2})|([2-9]\\d{3}))([-\\/\\._])(0?2)([-\\/\\._])(2[0-8]|1[0-9]|0?[1-9])$)|(^([2468][048]00)([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([3579][26]00)([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([1][89][0][48])([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([2-9][0-9][0][48])([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([1][89][2468][048])([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([2-9][0-9][2468][048])([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([1][89][13579][26])([-\\/\\._])(0?2)([-\\/\\._])(29)$)|(^([2-9][0-9][13579][26])([-\\/\\._])(0?2)([-\\/\\._])(29)$))")
+                    ?
+                    true
+                    : false;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void writeOrAppendLocalFile(String filePath, String writeLine) {
+
+
+        File file = new File(filePath);
+        try {
+            if (file.exists() && file.isDirectory()) {
+                return;
+            } else {
+                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, true));
+                bufferedWriter.newLine();
+                bufferedWriter.write(writeLine);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+            }
+
+        } catch (Exception e) {
+
+        }
+    }
+
+    public String getOldYear(int year, int month) {
+        Calendar c = Calendar.getInstance();
+        c.setTimeInMillis(System.currentTimeMillis());
+        c.add(Calendar.YEAR, -year);
+        c.add(Calendar.MONTH, -month);
+        return String.valueOf(c.getTime().getTime());
+    }
+
+    public String cleanChinese(String words) {
+        //return Pattern.compile("[\u4e00-\u9fa5]").matcher(words).replaceAll("");
+        return words.replace("[\u4e00-\u9fa5]", "");
+    }
+
+    //fieldNames : =FieldA=FieldB=FieldC=     sep 为 =
+    public <T> T toUpperValue(T obj, String fieldNames, String sep) {
+
+
+        try {
+            Class<?> aClass = obj.getClass();
+            Field[] declaredFields = aClass.getDeclaredFields();
+            for (Field declaredField : declaredFields) {
+                declaredField.setAccessible(true);
+
+                if (fieldNames.matches(sep.concat(declaredField.getName()).concat(sep))) {
+                    declaredField.set(obj, ((String) declaredField.get(obj)).toUpperCase());
+                }
+            }
+            return (T) obj;
+        } catch (Exception e) {
+
+            return null;
+        }
+    }
+
+    public String concatWords(String sep, boolean isHeadTail, String... words) {
+
+        try {
+
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < words.length; i++) {
+                sb.append(words[i]);
+                if (i < words.length - 1) {
+                    sb.append(sep);
+                }
+            }
+
+            if (isHeadTail) {
+                sb.insert(0, sep);
+                sb.insert(sb.length() - 1, sep);
+            }
+
+            return sb.toString();
+
+        } catch (Exception e) {
+            return null;
+        }
+
+    }
+
 }

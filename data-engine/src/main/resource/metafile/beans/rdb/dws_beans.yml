@@ -1,0 +1,68 @@
+dpm_dws_production_pass_station_dd:
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - area_code=String
+  - line_code=String
+  - work_dt=String
+  - work_shift=String
+  - sku=String
+  - part_no=String
+  - platform=String
+  - station_code=String
+  - station_name=String
+  - fail_count=String
+  - total_count=String
+  - customer=String
+  - data_granularity=String
+  - update_dt=String
+  - update_by=String
+  - data_from=String
+
+#=========================================================
+# OTD
+#=========================================================
+#day_id+site_code+level_code+dn_no+dn_item+po_no+po_item+customer
+dpm_dws_production_otd:
+  - Rowkey=String
+  - work_dt=String
+  - site_code=String
+  - level_code=String
+  - plant_code=String
+  - customer=String
+  - so_no=String
+  - so_item=String
+  - po_no=String
+  - po_item=String
+  - dn_no=String
+  - dn_item=String
+  - customer_pn=String
+  - shiptocountry=String
+  - commit_ship_qty=String
+  - ship_qty=String
+  - update_dt=String
+  - update_by=String
+  - data_from=String
+
+dpm_dws_production_output_dd:
+  - Rowkey=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - area_code=String
+  - line_code=String
+  - part_no=String
+  - sku=String
+  - platform=String
+  - workorder_type=String
+  - work_dt=String
+  - output_qty=String
+  - normalized_output_qty=String
+  - data_granularity=String
+  - customer=String
+  - update_dt=String
+  - update_by=String
+  - data_from=String
+  - work_shift=String

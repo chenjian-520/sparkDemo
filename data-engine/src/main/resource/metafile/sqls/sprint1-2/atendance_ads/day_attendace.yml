@@ -1,0 +1,90 @@
+day_attendance : >
+  "SELECT
+       work_dt,
+       site_code,
+       level_code,
+       formatNumber(day_dws_personnel_overview.attendance_rate_actual) attendance_rate_actual
+    FROM day_dws_personnel_overview"
+
+week_attendance : >
+  " SELECT
+        day_dws_personnel_overview.week_id,
+        day_dws_personnel_overview.site_code,
+        day_dws_personnel_overview.level_code,
+        formatNumber((day_dws_personnel_overview.act_attendance_qty / day_dws_personnel_overview.ttl_incumbents_qty)) attendance_rate_actual
+      FROM (
+             SELECT
+               calculateYearWeek(work_dt) week_id,
+               site_code,
+               level_code,
+               sum(act_attendance_qty)    act_attendance_qty,
+               sum(ttl_incumbents_qty)    ttl_incumbents_qty
+             FROM day_dws_personnel_overview
+             GROUP BY
+               calculateYearWeek(work_dt),
+               site_code,
+               level_code
+           ) day_dws_personnel_overview"
+month_attendance : >
+  " SELECT
+       day_dws_personnel_overview.month_id,
+       day_dws_personnel_overview.site_code,
+       day_dws_personnel_overview.level_code,
+       formatNumber((day_dws_personnel_overview.act_attendance_qty / day_dws_personnel_overview.ttl_incumbents_qty)) attendance_rate_actual
+     FROM (
+            SELECT
+              from_unixtime(to_unix_timestamp(work_dt, 'yyyy-MM-dd'), 'yyyyMM') month_id,
+              site_code,
+              level_code,
+              sum(act_attendance_qty)    act_attendance_qty,
+              sum(ttl_incumbents_qty)    ttl_incumbents_qty
+            FROM day_dws_personnel_overview
+            GROUP BY
+              from_unixtime(to_unix_timestamp(work_dt, 'yyyy-MM-dd'), 'yyyyMM'),
+              site_code,
+              level_code
+          ) day_dws_personnel_overview
+  "
+quarter_attendance : >
+  "SELECT
+       day_dws_personnel_overview.quarter_id,
+       day_dws_personnel_overview.site_code,
+       day_dws_personnel_overview.level_code,
+       formatNumber((day_dws_personnel_overview.act_attendance_qty / day_dws_personnel_overview.ttl_incumbents_qty)) attendance_rate_actual
+     FROM (
+            SELECT
+              cast(concat(year(from_unixtime(to_unix_timestamp(work_dt, 'yyyy-MM-dd'), 'yyyy-MM-dd')),
+                          quarter(from_unixtime(to_unix_timestamp(work_dt, 'yyyy-MM-dd'), 'yyyy-MM-dd'))) AS
+                   INTEGER)           quarter_id,
+              site_code,
+              level_code,
+              sum(act_attendance_qty) act_attendance_qty,
+              sum(ttl_incumbents_qty) ttl_incumbents_qty
+            FROM day_dws_personnel_overview
+            GROUP BY
+              cast(concat(year(from_unixtime(to_unix_timestamp(work_dt, 'yyyy-MM-dd'), 'yyyy-MM-dd')),
+                          quarter(from_unixtime(to_unix_timestamp(work_dt, 'yyyy-MM-dd'), 'yyyy-MM-dd'))) AS INTEGER),
+              site_code,
+              level_code
+          ) day_dws_personnel_overview"
+year_attendance : >
+  "
+     SELECT
+       day_dws_personnel_overview.year_id,
+       day_dws_personnel_overview.site_code,
+       day_dws_personnel_overview.level_code,
+       formatNumber((day_dws_personnel_overview.act_attendance_qty / day_dws_personnel_overview.ttl_incumbents_qty)) attendance_rate_actual
+     FROM (
+            SELECT
+              year(from_unixtime(to_unix_timestamp(work_dt, 'yyyy-MM-dd'), 'yyyy-MM-dd')) year_id,
+              site_code,
+              level_code,
+              sum(act_attendance_qty)                                                   act_attendance_qty,
+              sum(ttl_incumbents_qty)                                                   ttl_incumbents_qty
+            FROM day_dws_personnel_overview
+            GROUP BY
+              year(from_unixtime(to_unix_timestamp(work_dt, 'yyyy-MM-dd'), 'yyyy-MM-dd')),
+              site_code,
+              level_code
+          ) day_dws_personnel_overview
+  "

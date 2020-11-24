@@ -1,0 +1,22 @@
+###########################################################
+#                  FOLD ID
+#任务层
+#    Sprint4=6fbaa726-88fb-4d00-9acc-f2d86bcadf7c
+#    Sprint3=f6faa536-f4fa-4c70-9a3a-16f6f20abefc
+#    Sprint1-2=05c822b5-5fd3-4be6-a4e1-787cfb80747a
+#调度层
+#    Sprint4=68c5cd62-b468-409c-b099-c39513181164
+#    Sprint3=a75bfcd9-205c-4f8f-ab7c-f3393bea3148
+#    Sprint1-2=ae050257-17b7-4da7-8742-86e7e188c79f
+#
+###########################################################
+test :
+    - 'dprunclass=com.foxconn.dpm.test.Auto_UpLoad_Project_Test'
+    - 'task_fold_id=6fbaa726-88fb-4d00-9acc-f2d86bcadf7c'
+    - 'schedule_fold_id=68c5cd62-b468-409c-b099-c39513181164'
+    - 'jarAbsPath=D:/YZH_WORK/workspace_now/dpm-wh/data-engine/out/artifacts/data_engine/data_engine.jar'
+    - 'cron=0 0,44 * * * ?'
+    - 'taskTimeout=600'
+    - 'retriesNumber=2'
+    - 'sc_description=TESTAAAA'
+    - 'taskLevel=0-0'

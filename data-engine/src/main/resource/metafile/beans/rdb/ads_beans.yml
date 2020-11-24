@@ -1,0 +1,608 @@
+dpm_ads_production_upph_detail:
+  - id=String
+  - work_date=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - line_code=String
+  - block_code=String
+  - emp_humman_resource_code=String
+  - workshift_code=String
+  - work_headcount=Integer
+  - output_hours=Integer
+  - output_qty_actual=Integer
+  - etl_time=String
+
+dpm_ads_production_upph_day :
+  - id=String
+  - work_date=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - line_code=String
+  - block_code=String
+  - emp_humman_resource_code=String
+  - upph_actual=Float
+  - upph_target=Float
+  - etl_time=String
+
+dpm_ads_production_upph_week :
+  - id=String
+  - week_id=Integer
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - line_code=String
+  - block_code=String
+  - emp_humman_resource_code=String
+  - upph_actual=Float
+  - upph_target=Float
+  - etl_time=String
+
+dpm_ads_production_upph_month :
+  - id=String
+  - month_id=Integer
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - line_code=String
+  - block_code=String
+  - emp_humman_resource_code=String
+  - upph_actual=Float
+  - upph_target=Float
+  - etl_time=String
+
+
+dpm_ads_production_upph_quarter :
+  - id=String
+  - quarter_id=Integer
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - line_code=String
+  - block_code=String
+  - emp_humman_resource_code=String
+  - upph_actual=Float
+  - upph_target=Float
+  - etl_time=String
+
+
+dpm_ads_production_upph_year:
+  - id=String
+  - year_id=Integer
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - line_code=String
+  - block_code=String
+  - emp_humman_resource_code=String
+  - upph_actual=Float
+  - upph_target=Float
+  - etl_time=String
+
+
+dpm_ads_production_line_utilisation_day :
+  - id=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - building_code=String
+  - line_code=String
+  - work_date=String
+  - workshift_code=String
+  - output_hours=Integer
+  - line_qty_actual=Integer
+  - can_produce_time=Integer
+  - line_utilisation_actual=String
+  - line_utilisation_target=String
+  - etl_time=String
+
+dpm_ads_production_line_utilisation_week :
+  - id=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - building_code=String
+  - line_code=String
+  - week_id=Integer
+  - workshift_code=String
+  - output_hours=Integer
+  - line_qty_actual=Integer
+  - can_produce_time=Integer
+  - line_utilisation_actual=String
+  - line_utilisation_target=String
+  - etl_time=String
+
+dpm_ads_production_line_utilisation_month :
+  - id=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - building_code=String
+  - line_code=String
+  - month_id=Integer
+  - workshift_code=String
+  - output_hours=Integer
+  - line_qty_actual=Integer
+  - can_produce_time=Integer
+  - line_utilisation_actual=String
+  - line_utilisation_target=String
+  - etl_time=String
+
+dpm_ads_production_line_utilisation_quarter :
+  - id=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - building_code=String
+  - line_code=String
+  - quarter_id=Integer
+  - workshift_code=String
+  - output_hours=Integer
+  - line_qty_actual=Integer
+  - can_produce_time=Integer
+  - line_utilisation_actual=String
+  - line_utilisation_target=String
+  - etl_time=String
+
+dpm_ads_production_line_utilisation_year :
+  - id=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - building_code=String
+  - line_code=String
+  - year_id=Integer
+  - workshift_code=String
+  - output_hours=Integer
+  - line_qty_actual=Integer
+  - can_produce_time=Integer
+  - line_utilisation_actual=String
+  - line_utilisation_target=String
+  - etl_time=String
+
+dpm_ads_production_oee_day :
+  - id=String
+  - work_date=String
+  - workshift_code=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - line_code=String
+  - machine_id=String
+  - oee1_actual=Float
+  - oee2_actual=Float
+  - oee2_target=Float
+  - etltime=String
+  - loading_time=Float
+  - npi_time=Float
+  - breakdown_time=Float
+  - die_failure_time=Float
+  - short_halt_time=Float
+  - test_equipment_time=Float
+  - co_time=Float
+  - stamping_change_material=Float
+  - molding_clean=Float
+  - incoming_material_adverse=Float
+  - wait_material=Float
+  - energy_error=Float
+  - equipment_error=Float
+  - labour_error=Float
+  - other_error=Float
+  - output_hours=Float
+  - operation_time=Float
+  - good_product_qty=Float
+  - actual_output_qty=Float
+  - total_worktime_oee1=Float
+  - total_worktime_oee2=Float
+
+
+dpm_ads_production_oee_week :
+  - id=String
+  - week_id=Integer
+  - workshift_code=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - line_code=String
+  - machine_id=String
+  - oee1_actual=Float
+  - oee2_actual=Float
+  - oee2_target=Float
+  - etltime=String
+
+dpm_ads_production_oee_month :
+  - id=String
+  - month_id=Integer
+  - workshift_code=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - line_code=String
+  - machine_id=String
+  - oee1_actual=Float
+  - oee2_actual=Float
+  - oee2_target=Float
+  - etltime=String
+
+dpm_ads_production_oee_quarter :
+  - id=String
+  - quarter_id=Integer
+  - workshift_code=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - line_code=String
+  - machine_id=String
+  - oee1_actual=Float
+  - oee2_actual=Float
+  - oee2_target=Float
+  - etltime=String
+
+dpm_ads_production_oee_year :
+  - id=String
+  - year_id=Integer
+  - workshift_code=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - line_code=String
+  - machine_id=String
+  - oee1_actual=Float
+  - oee2_actual=Float
+  - oee2_target=Float
+  - etltime=String
+
+
+dpm_ads_quality_fpy_day:
+  - id=String
+  - work_date=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - customer_code=String
+  - line_code=String
+  - fpy_actual=Float
+  - fpy_target=Float
+  - etl_time=String
+
+dpm_ads_quality_fpy_week:
+  - id=String
+  - week_id=Integer
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - customer_code=String
+  - line_code=String
+  - fpy_actual=Float
+  - fpy_target=Float
+  - etl_time=String
+
+dpm_ads_quality_fpy_month:
+  - id=String
+  - month_id=Integer
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - customer_code=String
+  - line_code=String
+  - fpy_actual=Float
+  - fpy_target=Float
+  - etl_time=String
+
+dpm_ads_quality_fpy_quarter:
+  - id=String
+  - quarter_id=Integer
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - customer_code=String
+  - line_code=String
+  - fpy_actual=Float
+  - fpy_target=Float
+  - etl_time=String
+
+dpm_ads_quality_fpy_year:
+  - id=String
+  - year_id=Integer
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - customer_code=String
+  - line_code=String
+  - fpy_actual=Float
+  - fpy_target=Float
+  - etl_time=String
+
+dpm_ads_quality_fpy_detail_day:
+  - id=String
+  - work_date=String
+  - workshift_code=String
+  - site_code=String
+  - level_code=String
+  - line_code=String
+  - factory_code=String
+  - process_code=String
+  - customer_code=String
+  - ng_qty=Integer
+  - pass_qty=Integer
+  - etl_time=String
+
+dpm_ads_production_uph_adherence_day:
+  - id=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - customer_code=String
+  - workshift_code=String
+  - work_date=String
+  - uph_actual=Integer
+  - uph_target=Integer
+  - output_qty_actual=Integer
+  - cycle_time_actual=Integer
+  - output_hours=Integer
+  - uph_adherence_actual=Float
+  - uph_adherence_target=Float
+  - etl_time=String
+
+dpm_ads_production_uph_adherence_week:
+  - id=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - customer_code=String
+  - workshift_code=String
+  - week_id=Integer
+  - uph_actual=Integer
+  - uph_target=Integer
+  - output_qty_actual=Integer
+  - cycle_time_actual=Integer
+  - output_hours=Integer
+  - uph_adherence_actual=Float
+  - uph_adherence_target=Float
+  - etl_time=String
+
+dpm_ads_production_uph_adherence_month:
+  - id=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - customer_code=String
+  - workshift_code=String
+  - month_id=Integer
+  - uph_actual=Integer
+  - uph_target=Integer
+  - output_qty_actual=Integer
+  - cycle_time_actual=Integer
+  - output_hours=Integer
+  - uph_adherence_actual=Float
+  - uph_adherence_target=Float
+  - etl_time=String
+
+dpm_ads_production_uph_adherence_quarter:
+  - id=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - customer_code=String
+  - workshift_code=String
+  - quarter_id=Integer
+  - uph_actual=Integer
+  - uph_target=Integer
+  - output_qty_actual=Integer
+  - cycle_time_actual=Integer
+  - output_hours=Integer
+  - uph_adherence_actual=Float
+  - uph_adherence_target=Float
+  - etl_time=String
+
+dpm_ads_production_uph_adherence_year:
+  - id=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - customer_code=String
+  - workshift_code=String
+  - year_id=Integer
+  - uph_actual=Integer
+  - uph_target=Integer
+  - output_qty_actual=Integer
+  - cycle_time_actual=Integer
+  - output_hours=Integer
+  - uph_adherence_actual=Float
+  - uph_adherence_target=Float
+  - etl_time=String
+
+dpm_ads_production_schedule_adherence_day:
+  - id=String
+  - work_date=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - line_code=String
+  - customer_code=String
+  - workshift_code=String
+  - work_order=String
+  - work_order_qty=Integer
+  - output_qty_actual=Integer
+  - schedule_adherence=Float
+  - etl_time=String
+  - schedule_adherence_target=Float
+
+dpm_ads_production_schedule_adherence_week:
+  - id=String
+  - week_id=Integer
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - line_code=String
+  - customer_code=String
+  - workshift_code=String
+  - work_order=String
+  - work_order_qty=Integer
+  - output_qty_actual=Integer
+  - schedule_adherence=Float
+  - etl_time=String
+  - schedule_adherence_target=Float
+
+dpm_ads_production_schedule_adherence_month:
+  - id=String
+  - month_id=Integer
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - line_code=String
+  - customer_code=String
+  - workshift_code=String
+  - work_order=String
+  - work_order_qty=Integer
+  - output_qty_actual=Integer
+  - schedule_adherence=Float
+  - etl_time=String
+  - schedule_adherence_target=Float
+
+dpm_ads_production_schedule_adherence_quarter:
+  - id=String
+  - quarter_id=Integer
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - line_code=String
+  - customer_code=String
+  - workshift_code=String
+  - work_order=String
+  - work_order_qty=Integer
+  - output_qty_actual=Integer
+  - schedule_adherence=Float
+  - etl_time=String
+  - schedule_adherence_target=Float
+
+dpm_ads_production_schedule_adherence_year:
+  - id=String
+  - year_id=Integer
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - line_code=String
+  - customer_code=String
+  - workshift_code=String
+  - work_order=String
+  - work_order_qty=Integer
+  - output_qty_actual=Integer
+  - schedule_adherence=Float
+  - etl_time=String
+  - schedule_adherence_target=Float
+
+########################################################
+#                     OTD
+########################################################
+dpm_ads_production_otd_day:
+  - id=String
+  - work_date=String
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - customer_code=String
+  - plant_code=String
+  - sku=String
+  - ship_qty_actual=Integer
+  - ship_qty_target=Integer
+  - etl_time=String
+  - otd_actual=Float
+  - otd_target=Float
+
+dpm_ads_production_otd_week:
+  - id=String
+  - week_id=Integer
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - customer_code=String
+  - plant_code=String
+  - sku=String
+  - ship_qty_actual=Integer
+  - ship_qty_target=Integer
+  - etl_time=String
+  - otd_actual=Float
+  - otd_target=Float
+
+dpm_ads_production_otd_month:
+  - id=String
+  - month_id=Integer
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - customer_code=String
+  - plant_code=String
+  - sku=String
+  - ship_qty_actual=Integer
+  - ship_qty_target=Integer
+  - etl_time=String
+  - otd_actual=Float
+  - otd_target=Float
+
+dpm_ads_production_otd_quarter:
+  - id=String
+  - quarter_id=Integer
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - customer_code=String
+  - plant_code=String
+  - sku=String
+  - ship_qty_actual=Integer
+  - ship_qty_target=Integer
+  - etl_time=String
+  - otd_actual=Float
+  - otd_target=Float
+
+dpm_ads_production_otd_year:
+  - id=String
+  - year_id=Integer
+  - site_code=String
+  - level_code=String
+  - factory_code=String
+  - process_code=String
+  - customer_code=String
+  - plant_code=String
+  - sku=String
+  - ship_qty_actual=Integer
+  - ship_qty_target=Integer
+  - etl_time=String
+  - otd_actual=Float
+  - otd_target=Float
